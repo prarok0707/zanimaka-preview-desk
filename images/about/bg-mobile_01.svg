@@ -1,0 +1,13 @@
+<svg width="979.990234" height="1128.112793" viewBox="0 0 979.99 1128.11" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs/>
+	<g opacity="0.500000">
+		<mask id="mask_1_1393" fill="white">
+			<path id="Combined Shape" d="M861.964 1127.65C979.99 939.679 979.99 659.187 979.99 490.644C979.99 219.668 760.612 0 489.995 0C219.378 0 0 219.668 0 490.644L0 492.294C-0.00146484 661.15 -0.00341797 940.747 117.634 1128.11C207.543 1022.93 341.071 956.209 489.995 956.209C638.703 956.209 772.059 1022.74 861.964 1127.65Z" clip-rule="evenodd" fill="" fill-opacity="1.000000" fill-rule="evenodd"/>
+		</mask>
+		<path id="Combined Shape" d="M861.964 1127.65C979.99 939.679 979.99 659.187 979.99 490.644C979.99 219.668 760.612 0 489.995 0C219.378 0 0 219.668 0 490.644L0 492.294C-0.00146484 661.15 -0.00341797 940.747 117.634 1128.11C207.543 1022.93 341.071 956.209 489.995 956.209C638.703 956.209 772.059 1022.74 861.964 1127.65Z" clip-rule="evenodd" fill="#EEE1FA" fill-opacity="1.000000" fill-rule="evenodd" mask="url(#mask_1_1393)"/>
+		<path id="Combined Shape" d="" clip-rule="evenodd" fill="#979797" fill-opacity="0.000000" fill-rule="evenodd"/>
+	</g>
+</svg>
