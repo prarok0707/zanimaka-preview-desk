@@ -79,9 +79,12 @@
                   </div>
                 </div>
                 <div class="main__calc calc">
-                  <div class="calc__dekor">
-                    <img src="./images/calc/dekor_01.svg" alt="dekor" />
-                  </div>
+                  <picture class="calc__dekor"
+                    ><source
+                      srcset="./images/calc/dekor_01.webp"
+                      type="image/webp" />
+                    <img src="./images/calc/dekor_01.png" alt="dekor"
+                  /></picture>
                   <form class="calc__form">
                     <div class="calc__groups">
                       <div class="calc__group">
@@ -153,10 +156,17 @@
           <section class="index__about about">
             <picture class="about__bg"
               ><source
-                srcset="./images/about/bg_01.svg"
-                type="image/svg+xml"
+                srcset="./images/about/bg_01.webp"
+                type="image/webp"
                 media="(min-width: 576px)" />
-              <img src="./images/about/bg-mobile_01.svg" alt="bg" /></picture
+              <source
+                srcset="./images/about/bg_01.png"
+                type="image/png"
+                media="(min-width: 576px)" />
+              <source
+                srcset="./images/about/bg_01-mobile.webp"
+                type="image/webp" />
+              <img src="./images/about/bg_01-mobile.png" alt="bg" /></picture
             ><img
               class="about__figure-dekor"
               src="./images/about/figure-dekor_01.svg"
@@ -214,9 +224,504 @@
               </div>
             </div>
           </section>
+          <section class="index__paycards paycards">
+            <div class="paycards__container">
+              <img
+                class="paycards__dekor paycards__dekor_05"
+                src="./images/paycards/dekor_05.png"
+                alt="dekor"
+              />
+              <img
+                class="paycards__dekor paycards__dekor_01"
+                src="./images/paycards/dekor_01.svg"
+                alt="dekor"
+              />
+              <img
+                class="paycards__dekor paycards__dekor_02"
+                src="./images/paycards/dekor_02.svg"
+                alt="dekor"
+              />
+              <img
+                class="paycards__dekor paycards__dekor_03"
+                src="./images/paycards/dekor_03.svg"
+                alt="dekor"
+              />
+              <img
+                class="paycards__dekor paycards__dekor_04"
+                src="./images/paycards/dekor_04.svg"
+                alt="dekor"
+              />
+              <div class="container">
+                <div class="paycards__wrapper">
+                  <div class="paycards__body">
+                    <h2 class="paycards__title index__title">
+                      Способы<br />получить средства
+                    </h2>
+                    <span class="paycards__subtitle"
+                      >Мы подберем предложения с моментальным переводом денег на
+                      карту. Оплату услуг сервиса можно произвести удобным
+                      способом.</span
+                    >
+                  </div>
+                  <div class="paycards__card-logo paycards__card-logo_qiwi">
+                    <img src="./images/paycards/logo_01.png" alt="logo" />
+                  </div>
+                  <div class="paycards__card-logo paycards__card-logo_mir">
+                    <img src="./images/paycards/logo_02.png" alt="logo" />
+                  </div>
+                  <div
+                    class="paycards__card-logo paycards__card-logo_mastercard"
+                  >
+                    <img src="./images/paycards/logo_03.png" alt="logo" />
+                  </div>
+                  <div class="paycards__card-logo paycards__card-logo_visa">
+                    <img src="./images/paycards/logo_04.png" alt="logo" />
+                  </div>
+                  <div class="paycards__card-logo paycards__card-logo_transfer">
+                    <img src="./images/paycards/logo_05.png" alt="logo" />
+                  </div>
+                  <div class="paycards__card-logo paycards__card-logo_maestro">
+                    <img src="./images/paycards/logo_06.png" alt="logo" />
+                  </div>
+                  <div class="paycards__card-logo paycards__card-logo_contact">
+                    <img src="./images/paycards/logo_07.png" alt="logo" />
+                  </div>
+                  <div class="paycards__card-logo paycards__card-logo_yandex">
+                    <img src="./images/paycards/logo_08.png" alt="logo" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="index__steps steps">
+            <div class="container">
+              <div class="steps__wrapper">
+                <h2 class="steps__title index__title">
+                  Как получить<br />деньги?
+                </h2>
+                <div class="steps__body">
+                  <div class="steps__poster">
+                    <img
+                      class="steps__poster-dekor"
+                      src="./images/steps/dekor_01.png"
+                      alt="dekor"
+                    />
+                    <div class="steps__poster-wrapper">
+                      <picture class="steps__poster-image"
+                        ><source
+                          srcset="./images/steps/img_01.webp"
+                          type="image/webp"
+                          media="(min-width:576px)" />
+                        <source
+                          srcset="./images/steps/img_01.png"
+                          type="image/png"
+                          media="(min-width:576px)" />
+                        <source
+                          srcset="./images/steps/img_01-mobile.webp"
+                          type="image/webp" />
+                        <img
+                          src="./images/steps/img_01-mobile.png"
+                          alt="image" /></picture
+                      ><span class="steps__label"
+                        >Это просто - всего 4 шага и деньги у вас на
+                        карте!</span
+                      >
+                    </div>
+                  </div>
+                  <div class="steps__items">
+                    <div class="steps__item">
+                      <div class="steps__icon">
+                        <img src="./images/steps/icon_01.svg" alt="icon" />
+                      </div>
+                      <div class="steps__item-info">
+                        <span class="steps__step">Шаг 1</span>
+                        <span class="steps__label">Заполните анкету</span>
+                      </div>
+                    </div>
+                    <div class="steps__item">
+                      <div class="steps__icon">
+                        <img src="./images/steps/icon_02.svg" alt="icon" />
+                      </div>
+                      <div class="steps__item-info">
+                        <span class="steps__step">Шаг 2</span>
+                        <span class="steps__label">Выберите сумму и срок</span>
+                      </div>
+                    </div>
+                    <div class="steps__item">
+                      <div class="steps__icon">
+                        <img src="./images/steps/icon_03.svg" alt="icon" />
+                      </div>
+                      <div class="steps__item-info">
+                        <span class="steps__step">Шаг 3</span>
+                        <span class="steps__label">Получите подтверждение</span>
+                      </div>
+                    </div>
+                    <div class="steps__item">
+                      <div class="steps__icon">
+                        <img src="./images/steps/icon_04.svg" alt="icon" />
+                      </div>
+                      <div class="steps__item-info">
+                        <span class="steps__step">Шаг 4</span>
+                        <span class="steps__label">Получите ваши деньги</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img
+              class="steps__dekor steps__dekor_01"
+              src="./images/steps/dekor_02.svg"
+              alt="dekor"
+            />
+            <img
+              class="steps__dekor steps__dekor_02"
+              src="./images/steps/dekor_03.svg"
+              alt="dekor"
+            />
+            <img
+              class="steps__dekor steps__dekor_03"
+              src="./images/steps/dekor_04.svg"
+              alt="dekor"
+            />
+            <img
+              class="steps__dekor steps__dekor_04"
+              src="./images/steps/dekor_05.svg"
+              alt="dekor"
+            />
+          </section>
+          <div class="index__questions questions">
+            <div class="container">
+              <div class="questions__wrapper">
+                <img
+                  class="questions__dekor"
+                  src="./images/questions/dekor_01.png"
+                  alt="dekor"
+                />
+                <h2 class="questions__title index__title">
+                  Часто задаваемые вопросы
+                </h2>
+                <div class="questions__items" data-questions-ac data-ac>
+                  <div class="questions__item active" data-ac-item>
+                    <div class="questions__head active" data-ac-button>
+                      <div class="questions__icon">
+                        <svg>
+                          <use
+                            href="./images/sprite.svg#drop"
+                            xlink:href="./images/sprite.svg#drop"
+                          ></use>
+                        </svg>
+                      </div>
+                      <span class="questions__label">Условия выдачи займа</span>
+                    </div>
+                    <div class="questions__body active" data-ac-body>
+                      <div class="questions__answer">
+                        Оставьте заявку на получение денег: работаем со всеми
+                        клиентами — не важно, какая у вас кредитная история и
+                        имеются ли текущие просрочки. Мы подберем предложения с
+                        моментальным переводом денег на карту. Оплату услуг
+                        сервиса можно произвести удобным способом.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="questions__item" data-ac-item>
+                    <div class="questions__head" data-ac-button>
+                      <div class="questions__icon">
+                        <svg>
+                          <use
+                            href="./images/sprite.svg#drop"
+                            xlink:href="./images/sprite.svg#drop"
+                          ></use>
+                        </svg>
+                      </div>
+                      <span class="questions__label"
+                        >Как долго длиться рассмотрение заявки?</span
+                      >
+                    </div>
+                    <div class="questions__body" data-ac-body>
+                      <div class="questions__answer">
+                        Оставьте заявку на получение денег: работаем со всеми
+                        клиентами — не важно, какая у вас кредитная история и
+                        имеются ли текущие просрочки. Мы подберем предложения с
+                        моментальным переводом денег на карту. Оплату услуг
+                        сервиса можно произвести удобным способом.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="questions__item" data-ac-item>
+                    <div class="questions__head" data-ac-button>
+                      <div class="questions__icon">
+                        <svg>
+                          <use
+                            href="./images/sprite.svg#drop"
+                            xlink:href="./images/sprite.svg#drop"
+                          ></use>
+                        </svg>
+                      </div>
+                      <span class="questions__label"
+                        >Если я не успеваю вернуть заем?</span
+                      >
+                    </div>
+                    <div class="questions__body" data-ac-body>
+                      <div class="questions__answer">
+                        Оставьте заявку на получение денег: работаем со всеми
+                        клиентами — не важно, какая у вас кредитная история и
+                        имеются ли текущие просрочки. Мы подберем предложения с
+                        моментальным переводом денег на карту. Оплату услуг
+                        сервиса можно произвести удобным способом.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="questions__item" data-ac-item>
+                    <div class="questions__head" data-ac-button>
+                      <div class="questions__icon">
+                        <svg>
+                          <use
+                            href="./images/sprite.svg#drop"
+                            xlink:href="./images/sprite.svg#drop"
+                          ></use>
+                        </svg>
+                      </div>
+                      <span class="questions__label"
+                        >Получу ли я деньги с плохой кредитной историей?</span
+                      >
+                    </div>
+                    <div class="questions__body" data-ac-body>
+                      <div class="questions__answer">
+                        Оставьте заявку на получение денег: работаем со всеми
+                        клиентами — не важно, какая у вас кредитная история и
+                        имеются ли текущие просрочки. Мы подберем предложения с
+                        моментальным переводом денег на карту. Оплату услуг
+                        сервиса можно произвести удобным способом.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="questions__item" data-ac-item>
+                    <div class="questions__head" data-ac-button>
+                      <div class="questions__icon">
+                        <svg>
+                          <use
+                            href="./images/sprite.svg#drop"
+                            xlink:href="./images/sprite.svg#drop"
+                          ></use>
+                        </svg>
+                      </div>
+                      <span class="questions__label"
+                        >Сколько я могу получить и на какой срок?</span
+                      >
+                    </div>
+                    <div class="questions__body" data-ac-body>
+                      <div class="questions__answer">
+                        Оставьте заявку на получение денег: работаем со всеми
+                        клиентами — не важно, какая у вас кредитная история и
+                        имеются ли текущие просрочки. Мы подберем предложения с
+                        моментальным переводом денег на карту. Оплату услуг
+                        сервиса можно произвести удобным способом.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="questions__item" data-ac-item>
+                    <div class="questions__head" data-ac-button>
+                      <div class="questions__icon">
+                        <svg>
+                          <use
+                            href="./images/sprite.svg#drop"
+                            xlink:href="./images/sprite.svg#drop"
+                          ></use>
+                        </svg>
+                      </div>
+                      <span class="questions__label"
+                        >Переплаты и комиссии по займу?</span
+                      >
+                    </div>
+                    <div class="questions__body" data-ac-body>
+                      <div class="questions__answer">
+                        Оставьте заявку на получение денег: работаем со всеми
+                        клиентами — не важно, какая у вас кредитная история и
+                        имеются ли текущие просрочки. Мы подберем предложения с
+                        моментальным переводом денег на карту. Оплату услуг
+                        сервиса можно произвести удобным способом.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <section class="index__features features">
+            <picture class="features__bg"
+              ><source
+                srcset="./images/features/bg_01.webp"
+                type="image/webp"
+                media="(min-width: 576px)" />
+              <source
+                srcset="./images/features/bg_01.png"
+                type="image/png"
+                media="(min-width: 576px)" />
+              <source
+                srcset="./images/features/bg_01-mobile.webp"
+                type="image/webp" />
+              <img src="./images/features/bg_01-mobile.png" alt="bg" /></picture
+            ><img
+              class="features__dekor features__dekor_01"
+              src="./images/features/dekor_01.svg"
+              alt="dekor"
+            />
+            <img
+              class="features__dekor features__dekor_02"
+              src="./images/features/dekor_02.svg"
+              alt="dekor"
+            />
+            <img
+              class="features__dekor features__dekor_03"
+              src="./images/features/dekor_03.svg"
+              alt="dekor"
+            />
+            <img
+              class="features__dekor features__dekor_04"
+              src="./images/features/dekor_04.svg"
+              alt="dekor"
+            />
+            <img
+              class="features__dekor features__dekor_05"
+              src="./images/features/dekor_05.svg"
+              alt="dekor"
+            />
+            <div class="container">
+              <div class="features__wrapper">
+                <div class="features__items">
+                  <div class="features__item">
+                    <strong class="features__value">19 542</strong>
+                    <span class="features__label">одобренных<br />займов</span>
+                  </div>
+                  <div class="features__item">
+                    <strong class="features__value">98%</strong>
+                    <span class="features__label"
+                      >вероятность<br />одобрения</span
+                    >
+                  </div>
+                  <div class="features__item">
+                    <strong class="features__value">680 M</strong>
+                    <span class="features__label">рублей<br />выдано</span>
+                  </div>
+                </div>
+                <h2 class="features__title index__title">
+                  Новым клиентам<br />займы под 0%
+                </h2>
+                <span class="features__label"
+                  >Поможем получить деньги за 10 минут</span
+                >
+                <a class="features__button button" href="#"
+                  ><span class="button__content">Получить деньгии</span></a
+                >
+              </div>
+            </div>
+          </section>
         </div>
       </main>
-      <footer class="footer"><h1 class="footer__title">Footer</h1></footer>
+      <footer class="footer">
+        <img
+          class="footer__dekor footer__dekor_01"
+          src="./images/footer/dekor_01.png"
+          alt="dekor"
+        />
+        <img
+          class="footer__dekor footer__dekor_02"
+          src="./images/footer/dekor_02.png"
+          alt="dekor"
+        />
+        <img
+          class="footer__dekor footer__dekor_03"
+          src="./images/footer/dekor_03.svg"
+          alt="dekor"
+        />
+        <div class="container">
+          <div class="footer__wrapper">
+            <div class="footer__contacts">
+              <div class="footer__contacts-row">
+                <div class="footer__icon">
+                  <img src="./images/footer/icon_01.svg" alt="icon" />
+                </div>
+                <div class="footer__contacts-group">
+                  <span class="footer__contacts-label">Телефон</span>
+                  <a class="footer__contacts-value" href="#"
+                    >8 (800) 555-98-79</a
+                  >
+                </div>
+              </div>
+              <div class="footer__contacts-row">
+                <div class="footer__icon">
+                  <img src="./images/footer/icon_02.svg" alt="icon" />
+                </div>
+                <div class="footer__contacts-group">
+                  <span class="footer__contacts-label">E-mail</span>
+                  <a class="footer__contacts-value" href="#"
+                    >support@moneybroz.ru</a
+                  >
+                </div>
+              </div>
+              <div class="footer__contacts-row">
+                <div class="footer__icon">
+                  <img src="./images/footer/icon_03.svg" alt="icon" />
+                </div>
+                <div class="footer__contacts-group">
+                  <span class="footer__contacts-label">Адрес</span
+                  ><aspan class="footer__contacts-value"
+                    >603093, Нижегородская обл., г. Нижний Новгород, ул.
+                    Родионова, д. 190А, пом. П14</aspan
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="footer__info">
+              <p>
+                Услугу подбора предложений “MoneyBroz” предоставляет компания
+                "Шпаркасса", ОГРН 1195275012327, ИНН/КПП 5260461690 / 526001001.
+                Сайт оказывает платные услуги по подбору кредитных продуктов для
+                клиентов, а именно предлагает клиенту список предложений
+                кредитных учреждений, некредитных финансовый организаций, в
+                которые клиент может обратиться с целью оформления заявки на
+                кредитный продукт. Проект не является банком или кредитором, не
+                относится к финансовым учреждениям и не несёт ответственности за
+                последствия любых заключенных договоров кредитования или условия
+                по ним. Минимальная процентная ставка у некоторых партнеров
+                составляет 0%. Чтобы оформить заявку на получение займа,
+                необходимо заполнить анкету на сайте проекта. Совершая любые
+                действия на сайте, вы даете свое
+                <a href="#">Согласие на обработку персональных данных,</a>
+                <a href="#">Согласие на получение рекламных материалов</a> и
+                <a href="#">Согласие на подписку.</a> Вы ознакомились и
+                соглашаетесь с
+                <a href="#"
+                  >Договором публичной оферты, Политикой Конфиденциальности.</a
+                >
+              </p>
+              <p>
+                * У пользователей сервиса есть возможность получить займ с
+                минимальной процентной ставкой 0%. Подробности при выборе
+                персонального предложения.
+              </p>
+              <p>
+                По любым вопросам вы можете связаться со специалистами сервиса
+                по электронной почте <a href="#">support@zanimaka.ru</a>
+              </p>
+              <p>
+                Обработка заявки платная: стоимость услуги (далее по сайту —
+                Активация сервиса) составляет 1 (один) рубль разовым платежом и
+                399 (триста девяносто девять) рублей с периодичностью согласно
+                <a href="#">тарифам</a> сервиса.
+              </p>
+              <p>
+                Если услуга перестала быть актуальна для вас (вы получили займ
+                или более не нуждаетесь в займах), вы можете самостоятельно
+                отписаться от услуги в любой момент
+                <a href="#">Изменить подписку.</a>
+              </p>
+              <p>©2020 Zanimaka</p>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
     <script src="./js/index.js"></script>
   </body>
