@@ -11,6 +11,8 @@
     --color-04: 255, 255, 255;
     --color-05: 238, 225, 250;
     --color-06: 154, 0, 155;
+    --color-07: 170, 153, 181;
+    --color-08: 235, 14, 14;
     --header-z-index: 999;
 }
 
@@ -786,5 +788,995 @@ body.no-scroll {
 @media (min-width: 768px) {
     .footer__info {
         flex: 0 1 48.125rem;
+    }
+}
+
+.inputs {
+    --height: 3.75rem;
+    --fs: 1.125rem;
+    --label-fs: 0.938rem;
+    --pi: 1.875rem;
+    --br: calc(var(--height) / 2);
+    --icon-size: 1.5rem;
+    --clr: var(--color-01);
+    --clr-focus: var(--color-02);
+    --placeholder-clr: var(--color-07);
+    --label-clr: var(--color-07);
+    --border-clr: var(--color-07);
+    --border-clr-hover: var(--color-01);
+    --border-clr-focus: var(--color-02);
+    --marker-clr: var(--color-02);
+    --error-clr: var(--color-08);
+    --duration: 0.2s;
+}
+
+.inputs.error {
+    --border-clr: var(--error-clr);
+}
+
+.inputs.error .inputs__text-error {
+    display: block;
+}
+
+.inputs__text-error {
+    display: none;
+    font-size: var(--label-fs);
+    line-height: 1.66;
+    color: rgb(var(--error-clr));
+}
+
+/*
+<div class="inputs input">
+  <div class="input__wrapper">
+    <span class="input__label">Имя <span>*</span></span>
+
+    <div class="input__group">
+      <div class="input__icon">
+        <img src="../images/inputs/calendar.svg" alt="calendar" />
+      </div>
+
+      <input class="input__target" type="text" />
+    </div>
+  </div>
+
+  <span class="inputs__text-error">Неверно заполненное поле</span>
+</div>
+*/
+.input__label {
+    margin: 0 0 0.333em 0;
+    display: block;
+    font-size: var(--label-fs);
+    font-weight: 400;
+    line-height: 1.333;
+    color: rgb(var(--label-clr));
+}
+
+.input__label span {
+    color: rgb(var(--marker-clr));
+}
+
+.input__group {
+    position: relative;
+}
+
+.input__icon {
+    width: var(--icon-size);
+    height: var(--icon-size);
+    position: absolute;
+    top: 50%;
+    right: var(--pi);
+    transform: translate3d(0, -50%, 0);
+}
+
+.input__icon img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+.input__icon + .input__target {
+    padding-right: calc(var(--icon-size) + var(--pi) + 0.938rem);
+}
+
+.input__target {
+    width: 100%;
+    height: var(--height);
+    padding: 0 var(--pi);
+    display: block;
+    font-size: var(--fs);
+    font-weight: 400;
+    line-height: 1.333;
+    color: rgb(var(--clr));
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    line-clamp: 1;
+    box-orient: vertical;
+    border: 1px solid rgb(var(--border-clr));
+    border-radius: var(--br);
+    position: relative;
+    z-index: 1;
+    outline: none;
+    background: none;
+    transition-property: border;
+    transition-duration: var(--duration);
+}
+
+.input__target::-moz-placeholder {
+    color: rgb(var(--placeholder-clr));
+}
+
+.input__target::placeholder {
+    color: rgb(var(--placeholder-clr));
+}
+
+@media (any-hover: hover) {
+    .input__target:hover {
+        --border-clr: var(--border-clr-hover);
+    }
+}
+
+.input__target:focus {
+    --border-clr: var(--border-clr-focus);
+}
+
+/*
+<div class="inputs select">
+  <div class="select__wrapper">
+    <span class="select__label">Город <span>*</span></span>
+
+    <div class="select__group">
+      <select data-select>
+        <option value="Санкт-Петербург">Санкт-Петербург</option>
+        <option value="Москва">Москва</option>
+        <option value="Екатеренбург">Екатеренбург</option>
+      </select>
+
+      <div class="select__drop">
+        <img src="../images/inputs/drop.svg" alt="drop" />
+      </div>
+    </div>
+  </div>
+
+  <span class="inputs__text-error">Неверно заполненное поле</span>
+</div>
+*/
+.select__label {
+    margin: 0 0 0.333em 0;
+    display: block;
+    font-size: var(--label-fs);
+    font-weight: 400;
+    line-height: 1.333;
+    color: rgb(var(--label-clr));
+}
+
+.select__label span {
+    color: rgb(var(--marker-clr));
+}
+
+.select__drop {
+    width: var(--icon-size);
+    height: var(--icon-size);
+    position: absolute;
+    top: 50%;
+    right: var(--pi);
+    transform: translate3d(0, -50%, 0);
+}
+
+.select__drop img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    -o-object-fit: contain;
+    object-fit: contain;
+    transition-property: transform;
+    transition-duration: var(--duration);
+}
+
+.select__group {
+    position: relative;
+}
+
+.select__group.active .select2-selection.select2-selection--single {
+    --border-clr: var(--border-clr-focus);
+}
+
+@media (any-hover: hover) {
+    .select__group.active .select2-selection.select2-selection--single:hover {
+        --border-clr: var(--border-clr-focus);
+    }
+}
+
+.select__group.active .select__drop img {
+    transform: scale(-1);
+}
+
+.select__group .select2-container {
+    display: block;
+    z-index: 1;
+}
+
+.select__group .select2-selection.select2-selection--single {
+    height: var(--height);
+    display: flex;
+    align-items: center;
+    border-radius: var(--br);
+    border: 1px solid rgb(var(--border-clr));
+    background: none;
+    transition-property: border;
+    transition-duration: var(--duration);
+}
+
+@media (any-hover: hover) {
+    .select__group .select2-selection.select2-selection--single:hover {
+        --border-clr: var(--border-clr-hover);
+    }
+}
+
+.select__group .select2-selection.select2-selection--single .select2-selection__rendered {
+    padding-right: calc(var(--icon-size) + var(--pi) + 0.938rem);
+    padding-left: var(--pi);
+    font-size: var(--fs);
+    font-weight: 400;
+    line-height: 1;
+    color: rgb(var(--clr));
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    line-clamp: 1;
+    box-orient: vertical;
+}
+
+.select__group .select2-selection__arrow {
+    display: none;
+}
+
+.select2-dropdown.select__dropdown {
+    padding: 0.625rem 0;
+    border-radius: var(--br);
+    border: 1px solid rgb(var(--border-clr-focus));
+    background: rgba(var(--color-04), 0.8);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+}
+
+.select2-dropdown.select__dropdown .select2-search {
+    display: none;
+}
+
+.select2-dropdown.select__dropdown .select2-results__option {
+    padding: 0.313rem var(--pi);
+    font-size: var(--fs);
+    font-weight: 400;
+    line-height: 1;
+    color: rgba(var(--clr), 0.8) !important;
+    transition-property: color;
+    transition-duration: var(--duration);
+    background: none !important;
+}
+
+@media (any-hover: hover) {
+    .select2-dropdown.select__dropdown .select2-results__option:hover {
+        color: rgba(var(--clr), 1) !important;
+    }
+}
+
+.select2-dropdown.select__dropdown .select2-results__option--selected {
+    color: rgb(var(--clr-focus)) !important;
+}
+
+/*
+<div class="inputs radio">
+  <div class="radio__wrapper">
+    <span class="radio__label">Пол <span>*</span></span>
+
+    <div class="radio__body">
+      <label class="radio__group">
+        <input
+          checked
+          class="radio__input"
+          type="radio"
+          name="sex"
+          value="male"
+        />
+
+        <span class="radio__text"><span>Мужской</span></span>
+      </label>
+      <label class="radio__group">
+        <input class="radio__input" type="radio" name="sex" value="female" />
+
+        <span class="radio__text"><span>Женский</span></span>
+      </label>
+    </div>
+  </div>
+
+  <span class="inputs__text-error">Неверно заполненное поле</span>
+</div>
+*/
+.radio__label {
+    margin: 0 0 0.333em 0;
+    display: block;
+    font-size: var(--label-fs);
+    font-weight: 400;
+    line-height: 1.333;
+    color: rgb(var(--label-clr));
+}
+
+.radio__label span {
+    color: rgb(var(--marker-clr));
+}
+
+.radio__body {
+    padding: 0.313rem;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid rgb(var(--border-clr));
+    border-radius: var(--br);
+}
+
+.radio__group {
+    flex: 1 1 auto;
+}
+
+@media (any-hover: hover) {
+    .radio__group:hover .radio__text {
+        color: rgb(var(--clr-focus));
+    }
+}
+
+.radio__input {
+    position: fixed;
+    top: -100%;
+    left: -100%;
+    z-index: -999;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.radio__input:checked + .radio__text {
+    color: rgb(var(--color-04));
+}
+
+.radio__input:checked + .radio__text::after {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.radio__text {
+    min-height: calc(var(--height) - 0.625rem);
+    padding: 0.278em 0.556em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--fs);
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.333;
+    color: rgb(var(--clr));
+    position: relative;
+    cursor: pointer;
+    border-radius: calc(var(--br) - 0.313rem);
+    transition-property: color;
+    transition-duration: 0.2s;
+}
+
+.radio__text::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: rgb(151, 12, 152);
+    box-shadow: inset 2px 3px 8px 0px rgba(255, 255, 255, 0.4), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.35), inset 2px -3px 15px 0px rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition-property: opacity, visibility, transform;
+    transition-duration: 0.2s;
+}
+
+.radio__text span {
+    position: relative;
+    z-index: 1;
+}
+
+/*
+<div class="checkbox">
+  <div class="checkbox__wrapper">
+    <label class="checkbox__gropu">
+      <input class="checkbox__input" type="checkbox" />
+
+      <div class="checkbox__icon">
+        <img src="../images/inputs/check.svg" alt="check" />
+      </div>
+
+      <p class="checkbox__text">Текст</p>
+    </label>
+  </div>
+</div>
+*/
+.checkbox__wrapper {
+    display: flex;
+}
+
+.checkbox__gropu {
+    display: flex;
+    cursor: pointer;
+}
+
+@media (any-hover: hover) {
+    .checkbox__gropu:hover .checkbox__icon {
+        border-color: rgb(var(--color-02));
+    }
+}
+
+.checkbox__input {
+    position: fixed;
+    top: -100%;
+    left: -100%;
+    z-index: -999;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.checkbox__input:checked + .checkbox__icon {
+    border-color: transparent;
+}
+
+.checkbox__input:checked + .checkbox__icon::after,
+.checkbox__input:checked + .checkbox__icon img {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.checkbox__icon {
+    flex: 0 0 2.188rem;
+    width: 2.188rem;
+    height: 2.188rem;
+    margin: 0 0.625rem 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.625rem;
+    position: relative;
+    border: 1px solid rgba(var(--color-01), 0.3);
+    transition: border 0.2s linear;
+}
+
+.checkbox__icon::after {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2) 100%), rgb(151, 12, 152);
+    box-shadow: inset 2px 3px 10px 0px rgba(255, 255, 255, 0.4), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.35), inset 2px -3px 15px 0px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition-property: opacity, visibility, transform;
+    transition-duration: 0.2s;
+}
+
+.checkbox__icon img {
+    flex: 0 0 1rem;
+    width: 1rem;
+    position: relative;
+    z-index: 1;
+    -o-object-fit: contain;
+    object-fit: contain;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition-property: opacity, visibility, transform;
+    transition-duration: 0.2s;
+}
+
+.checkbox__text {
+    display: block;
+    font-size: 0.75rem;
+    line-height: 1.667;
+    color: rgb(var(--color-01));
+}
+
+.checkbox__text span,
+.checkbox__text a {
+    text-decoration: underline;
+}
+
+@media (any-hover: hover) {
+    .checkbox__text span:hover,
+  .checkbox__text a:hover {
+        text-decoration: none;
+    }
+}
+
+.autocomplete-suggestions {
+    padding: 0.5rem var(--pi);
+    overflow: auto;
+    border-radius: 0.938rem;
+    border: 1px solid rgb(var(--border-clr-focus));
+    background: rgba(var(--color-04), 0.8);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 17px 15px -25px rgba(0, 0, 0, 0.6);
+    transform: translate3d(0, 0.313rem, 0);
+}
+
+.autocomplete-suggestion {
+    padding: 0.125rem 0;
+    overflow: hidden;
+    cursor: pointer;
+    font-size: var(--fs);
+    font-weight: 400;
+    line-height: 1.4;
+    color: rgb(var(--placeholder-clr));
+    transition: color var(--duration) linear;
+}
+
+@media (any-hover: hover) {
+    .autocomplete-suggestion:hover {
+        color: rgb(var(--clr));
+    }
+}
+
+.autocomplete-suggestions strong {
+    color: rgb(var(--clr-focus));
+}
+
+.autocomplete-group {
+    padding: 2px 5px;
+}
+
+.autocomplete-group strong {
+    display: block;
+    border-bottom: 1px solid #000;
+}
+
+/*
+<div class="autocomplete-suggestions">
+    <div class="autocomplete-group"><strong>NHL</strong></div>
+    <div class="autocomplete-suggestion autocomplete-selected">...</div>
+    <div class="autocomplete-suggestion">...</div>
+    <div class="autocomplete-suggestion">...</div>
+</div>
+*/
+.calc {
+    position: relative;
+}
+
+.calc__form {
+    padding: 2.5rem 1.25rem 3.125rem 1.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 1.25rem;
+    background: rgba(255, 255, 255, 0.55);
+    -webkit-backdrop-filter: blur(40.77px);
+    backdrop-filter: blur(40.77px);
+    box-shadow: 10px 30px 75px 0px rgba(68, 40, 94, 0.1), inset 5px 5px 25px 0px rgba(255, 255, 255, 0.5);
+}
+
+@media (min-width: 576px) {
+    .calc__form {
+        padding: 2.5rem 2.5rem 3.125rem 2.5rem;
+        border-radius: 1.875rem;
+    }
+}
+
+.calc__dekor {
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    filter: blur(40px);
+    opacity: 0.9;
+    pointer-events: none;
+}
+
+.calc__dekor img {
+    width: 100%;
+}
+
+@media (min-width: 576px) {
+    .calc__dekor {
+        width: 500px;
+    }
+}
+
+@media (min-width: 768px) {
+    .calc__dekor {
+        width: 430px;
+        top: 42%;
+    }
+}
+
+.calc__groups {
+    margin: 0 0 3.438rem 0;
+}
+
+.calc__group:not(:last-child) {
+    margin: 0 0 2.5rem 0;
+}
+
+.calc__head {
+    margin: 0 0 0.938rem 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+@media (min-width: 576px) {
+    .calc__head {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+    .calc__head {
+        margin: 0 0 0.625rem 0;
+    }
+}
+
+.calc__label {
+    padding: 0 0 0.231em 0;
+    display: block;
+    font-size: 0.813rem;
+    line-height: 1;
+    text-align: center;
+    color: rgb(var(--color-01));
+}
+
+@media (min-width: 390px) {
+    .calc__label {
+        padding: 0 0 0.333em 0;
+        font-size: 0.938rem;
+    }
+}
+
+@media (min-width: 576px) {
+    .calc__label {
+        padding: 0;
+    }
+}
+
+.calc__current-value {
+    display: block;
+    font-size: 1.75rem;
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
+    color: rgb(var(--color-01));
+}
+
+@media (min-width: 390px) {
+    .calc__current-value {
+        font-size: 2.5rem;
+    }
+}
+
+.calc__range.noUi-target {
+    --height: 1.25rem;
+    --icon-size: 2.5rem;
+    --border-radius: calc(var(--height) / 2);
+    height: var(--height);
+    border-radius: var(--border-radius);
+    border: none;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.01) 100%);
+    box-shadow: inset 0px 2px 0px 0px rgba(21, 17, 39, 0.05), inset -1px -2px 0px 0px rgba(255, 255, 255, 0.25);
+}
+
+.calc__range.noUi-target .noUi-connects {
+    border-radius: var(--border-radius);
+}
+
+.calc__range.noUi-target .noUi-connect {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.25) 100%), rgb(151, 12, 152);
+    box-shadow: inset 2px 3px 5px 0px rgba(255, 255, 255, 0.3), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.25), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.35), inset 2px -3px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.calc__range.noUi-target .noUi-handle {
+    width: 1em;
+    height: 1em;
+    font-size: var(--icon-size);
+    top: calc(var(--height) / 2);
+    transform: translate(0, -50%);
+    background: transparent;
+    background-image: url("../images/calc/icon_01.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+    border-radius: 0.333em;
+    box-shadow: 0px 5px 10px 0px rgba(76, 6, 77, 0.15);
+}
+
+.calc__range.noUi-target .noUi-handle::before, .calc__range.noUi-target .noUi-handle::after {
+    display: none;
+}
+
+.calc__range.noUi-target .noUi-marker {
+    display: none;
+}
+
+.calc__range.noUi-target .noUi-pips {
+    height: auto;
+    padding: 0.625rem 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.calc__range.noUi-target .noUi-value {
+    font-size: 0.75rem;
+    line-height: 1.25;
+    color: rgba(var(--color-01), 0.35);
+    position: static;
+    transform: none;
+}
+
+@media (min-width: 768px) {
+    .calc__range.noUi-target {
+        --icon-size: 1.875rem;
+    }
+}
+
+.wrapper-primary {
+    padding: 2.188rem 1.875rem;
+    margin: 0.625rem calc(-1 * var(--container-pi)) 3.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 1.25rem;
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 10px 30px 75px 0px rgba(68, 40, 94, 0.1), inset 5px 5px 25px 0px rgba(255, 255, 255, 0.5);
+    position: relative;
+}
+
+.wrapper-primary::after {
+    content: "";
+    width: 788px;
+    height: 0;
+    padding: 0 0 546px 0;
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    z-index: -1;
+    transform: translate3d(-50%, 0, 0);
+    background-image: url("../images/wrapper-primary/dekor_01.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: blur(40px);
+}
+
+@media (min-width: 576px) {
+    .wrapper-primary {
+        padding: 2.813rem 1.875rem;
+        margin: 0 auto 5rem auto;
+    }
+}
+
+@media (min-width: 992px) {
+    .wrapper-primary {
+        padding: 2.813rem 3.125rem;
+        border-radius: 1.875rem;
+    }
+}
+
+.insides-title {
+    display: block;
+    font-family: "BalsamiqSans";
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.333;
+    color: rgb(var(--color-01));
+}
+
+@media (min-width: 992px) {
+    .insides-title {
+        font-size: 1.875rem;
+    }
+}
+
+.current-step {
+    display: none;
+}
+
+@media (min-width: 576px) {
+    .current-step {
+        display: block;
+    }
+}
+
+.current-step__wrapper {
+    padding: 0.625rem 0 1.25rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.current-step__items {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.current-step__divide {
+    flex: 0 1 5rem;
+    width: 5rem;
+    height: 0.125rem;
+    background: rgba(var(--color-02), 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.current-step__divide::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate3d(-100%, 0, 0);
+    background: rgba(var(--color-02), 1);
+}
+
+.current-step__item {
+    flex: 0 0 3.333em;
+    width: 3.333em;
+    height: 3.333em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.938rem;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+    color: rgb(var(--color-02));
+    position: relative;
+    z-index: 1;
+    border-radius: 50%;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.05) 82.958%);
+    box-shadow: 1px 3px 8px 0px rgba(95, 46, 133, 0.08), -2px -2px 10px 0px rgba(255, 255, 255, 0.6), inset 0px 2px 1px 0px rgba(21, 17, 39, 0.05), inset -1px -1px 0px 0px rgba(255, 255, 255, 0.25);
+}
+
+.current-step__item.active, .current-step__item.current {
+    color: rgb(var(--color-04));
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.25) 100%), rgb(151, 12, 152);
+    box-shadow: 0px 8px 20px 0px rgba(76, 6, 77, 0.2), inset 2px 3px 5px 0px rgba(255, 255, 255, 0.3), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.25), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.35), inset 2px -3px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.current-step__item.current + .current-step__divide::after {
+    transform: translate3d(-50%, 0, 0);
+}
+
+.current-step__item.active + .current-step__divide::after {
+    transform: translate3d(0, 0, 0);
+}
+
+@media (min-width: 768px) {
+    .contacts-info__form {
+        max-width: 60.625rem;
+        padding-top: 0;
+        padding-bottom: 0;
+        display: flex;
+    }
+}
+
+.contacts__title {
+    margin: 0 0 1.563rem 0;
+}
+
+.contacts-info__calc {
+    padding: 0 0 2.5rem 0;
+    margin: 0 0 1.25rem 0;
+    border-bottom: 1px solid rgba(var(--color-04), 0.4);
+}
+
+.contacts-info__calc .contacts__title {
+    margin: 0 0 0.625rem 0;
+}
+
+@media (min-width: 576px) {
+    .contacts-info__calc {
+        padding: 0 3.125rem 2.5rem 3.125rem;
+    }
+
+    .contacts-info__calc .contacts__title {
+        margin: 0 0 1.25rem 0;
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .contacts-info__calc {
+        flex: 0 0 18.75rem;
+        padding: 2.813rem 1.25rem 2.813rem 0;
+        border-right: 1px solid rgba(var(--color-04), 0.4);
+        border-bottom: none;
+    }
+
+    .contacts-info__calc .contacts__title {
+        margin: 0 0 1.875rem 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .contacts-info__calc {
+        flex: 0 0 21.563rem;
+        padding: 2.813rem 2.188rem 2.813rem 0;
+    }
+
+    .contacts-info__calc .contacts__title {
+        margin: 0 0 2.813rem 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .contacts-info__data {
+        flex: 1 1 auto;
+        padding: 2.813rem 0 2.813rem 1.25rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .contacts-info__data {
+        padding: 2.813rem 0 2.813rem 2.188rem;
+    }
+}
+
+.contacts-info__inputs {
+    margin: 0 0 1.875rem 0;
+}
+
+.contacts-info__inputs .input:not(:last-child) {
+    margin: 0 0 1.563rem 0;
+}
+
+@media (min-width: 768px) {
+    .contacts-info__inputs {
+        margin: 0 0 2.188rem 0;
+    }
+
+    .contacts-info__inputs .input:not(:last-child) {
+        margin: 0 0 1.875rem 0;
+    }
+}
+
+.contacts-info__checkboxes {
+    margin: 0 0 1.563rem 0;
+}
+
+.contacts-info__checkboxes .checkbox:not(:last-child) {
+    margin: 0 0 1.25rem 0;
+}
+
+@media (min-width: 768px) {
+    .contacts-info__checkboxes {
+        margin: 0 0 2.188rem 0;
+    }
+}
+
+@media (min-width: 576px) {
+    .contacts-info__submit {
+        max-width: 14.375rem;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .contacts-info__submit {
+        margin: 0;
     }
 }
