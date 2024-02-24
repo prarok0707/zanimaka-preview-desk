@@ -13,7 +13,9 @@
     --color-06: 154, 0, 155;
     --color-07: 170, 153, 181;
     --color-08: 235, 14, 14;
+    --color-09: 56, 11, 56;
     --header-z-index: 999;
+    --popup-z-index: 999;
 }
 
 @media (min-width: 768px) {
@@ -319,6 +321,12 @@ body.no-scroll {
     overflow: hidden;
 }
 
+@media (min-width: 768px) {
+    .wrapper {
+        padding: 0;
+    }
+}
+
 .container {
     --_max-width-container: var(--max-width-container, 1200px);
     --_padding-inline: var(--container-pi, 15px);
@@ -372,7 +380,7 @@ body.no-scroll {
 
 @media (min-width: 768px) {
     .header {
-        position: absolute;
+        position: static;
     }
 
     .header::after {
