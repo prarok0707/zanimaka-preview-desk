@@ -319,6 +319,7 @@ body.no-scroll {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    position: relative;
 }
 
 @media (min-width: 768px) {
