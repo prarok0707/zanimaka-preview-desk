@@ -676,6 +676,14 @@ body.no-scroll {
     }
 }
 
+.footer__dekor_04 {
+    max-width: 260px;
+    left: -55px;
+    bottom: -100px;
+    filter: blur(40px);
+    opacity: 0.8;
+}
+
 .footer__wrapper {
     padding: 1.875rem 0;
 }
@@ -766,11 +774,24 @@ body.no-scroll {
     font-weight: 500;
     line-height: 1.75;
     color: rgb(var(--color-01));
+    transition: color 0.1s linear;
 }
 
 @media (min-width: 992px) {
     .footer__contacts-value {
         font-size: 1.25rem;
+    }
+}
+
+@media (any-hover: hover) {
+    a.footer__contacts-value:hover {
+        color: rgb(var(--color-02));
+    }
+}
+
+@media (any-hover: none) {
+    a.footer__contacts-value:active {
+        color: rgb(var(--color-02));
     }
 }
 
@@ -798,4 +819,954 @@ body.no-scroll {
     .footer__info {
         flex: 0 1 48.125rem;
     }
+}
+
+.inputs {
+    --height: 3.75rem;
+    --fs: 1.125rem;
+    --label-fs: 0.938rem;
+    --pi: 1.875rem;
+    --br: calc(var(--height) / 2);
+    --icon-size: 1.5rem;
+    --clr: var(--color-01);
+    --clr-focus: var(--color-02);
+    --placeholder-clr: var(--color-07);
+    --label-clr: var(--color-07);
+    --border-clr: var(--color-07);
+    --border-clr-hover: var(--color-01);
+    --border-clr-focus: var(--color-02);
+    --marker-clr: var(--color-02);
+    --error-clr: var(--color-08);
+    --duration: 0.2s;
+}
+
+.inputs.error {
+    --border-clr: var(--error-clr);
+}
+
+.inputs.error .inputs__text-error {
+    display: block;
+}
+
+.inputs__text-error {
+    display: none;
+    font-size: var(--label-fs);
+    line-height: 1.66;
+    color: rgb(var(--error-clr));
+}
+
+/*
+<div class="inputs input">
+  <div class="input__wrapper">
+    <span class="input__label">Имя <span>*</span></span>
+
+    <div class="input__group">
+      <div class="input__icon">
+        <img src="../images/inputs/calendar.svg" alt="calendar" />
+      </div>
+
+      <input class="input__target" type="text" />
+    </div>
+  </div>
+
+  <span class="inputs__text-error">Неверно заполненное поле</span>
+</div>
+*/
+.input__label {
+    margin: 0 0 0.333em 0;
+    display: block;
+    font-size: var(--label-fs);
+    font-weight: 400;
+    line-height: 1.333;
+    color: rgb(var(--label-clr));
+}
+
+.input__label span {
+    color: rgb(var(--marker-clr));
+}
+
+.input__group {
+    position: relative;
+}
+
+.input__icon {
+    width: var(--icon-size);
+    height: var(--icon-size);
+    position: absolute;
+    top: 50%;
+    right: var(--pi);
+    transform: translate3d(0, -50%, 0);
+}
+
+.input__icon img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+.input__icon + .input__target {
+    padding-right: calc(var(--icon-size) + var(--pi) + 0.938rem);
+}
+
+.input__target {
+    width: 100%;
+    height: var(--height);
+    padding: 0 var(--pi);
+    display: block;
+    font-size: var(--fs);
+    font-weight: 400;
+    line-height: 1.333;
+    color: rgb(var(--clr));
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    line-clamp: 1;
+    box-orient: vertical;
+    border: 1px solid rgb(var(--border-clr));
+    border-radius: var(--br);
+    position: relative;
+    z-index: 1;
+    outline: none;
+    background: none;
+    transition-property: border;
+    transition-duration: var(--duration);
+}
+
+.input__target::-moz-placeholder {
+    color: rgb(var(--placeholder-clr));
+}
+
+.input__target::placeholder {
+    color: rgb(var(--placeholder-clr));
+}
+
+@media (any-hover: hover) {
+    .input__target:hover {
+        --border-clr: var(--border-clr-hover);
+    }
+}
+
+.input__target:focus {
+    --border-clr: var(--border-clr-focus);
+}
+
+/*
+<div class="inputs select">
+  <div class="select__wrapper">
+    <span class="select__label">Город <span>*</span></span>
+
+    <div class="select__group">
+      <select data-select>
+        <option value="Санкт-Петербург">Санкт-Петербург</option>
+        <option value="Москва">Москва</option>
+        <option value="Екатеренбург">Екатеренбург</option>
+      </select>
+
+      <div class="select__drop">
+        <img src="../images/inputs/drop.svg" alt="drop" />
+      </div>
+    </div>
+  </div>
+
+  <span class="inputs__text-error">Неверно заполненное поле</span>
+</div>
+*/
+.select__label {
+    margin: 0 0 0.333em 0;
+    display: block;
+    font-size: var(--label-fs);
+    font-weight: 400;
+    line-height: 1.333;
+    color: rgb(var(--label-clr));
+}
+
+.select__label span {
+    color: rgb(var(--marker-clr));
+}
+
+.select__drop {
+    width: var(--icon-size);
+    height: var(--icon-size);
+    position: absolute;
+    top: 50%;
+    right: var(--pi);
+    transform: translate3d(0, -50%, 0);
+}
+
+.select__drop img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    -o-object-fit: contain;
+    object-fit: contain;
+    transition-property: transform;
+    transition-duration: var(--duration);
+}
+
+.select__group {
+    position: relative;
+}
+
+.select__group.active .select2-selection.select2-selection--single {
+    --border-clr: var(--border-clr-focus);
+}
+
+@media (any-hover: hover) {
+    .select__group.active .select2-selection.select2-selection--single:hover {
+        --border-clr: var(--border-clr-focus);
+    }
+}
+
+.select__group.active .select__drop img {
+    transform: scale(-1);
+}
+
+.select__group .select2-container {
+    display: block;
+    z-index: 1;
+}
+
+.select__group .select2-selection.select2-selection--single {
+    height: var(--height);
+    display: flex;
+    align-items: center;
+    border-radius: var(--br);
+    border: 1px solid rgb(var(--border-clr));
+    background: none;
+    transition-property: border;
+    transition-duration: var(--duration);
+}
+
+@media (any-hover: hover) {
+    .select__group .select2-selection.select2-selection--single:hover {
+        --border-clr: var(--border-clr-hover);
+    }
+}
+
+.select__group .select2-selection.select2-selection--single .select2-selection__rendered {
+    padding-right: calc(var(--icon-size) + var(--pi) + 0.938rem);
+    padding-left: var(--pi);
+    font-size: var(--fs);
+    font-weight: 400;
+    line-height: 1;
+    color: rgb(var(--clr));
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    line-clamp: 1;
+    box-orient: vertical;
+}
+
+.select__group .select2-selection__arrow {
+    display: none;
+}
+
+.select2-dropdown.select__dropdown {
+    padding: 0.625rem 0;
+    border-radius: var(--br);
+    border: 1px solid rgb(var(--border-clr-focus));
+    background: rgba(var(--color-04), 0.8);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+}
+
+.select2-dropdown.select__dropdown .select2-search {
+    display: none;
+}
+
+.select2-dropdown.select__dropdown .select2-results__option {
+    padding: 0.313rem var(--pi);
+    font-size: var(--fs);
+    font-weight: 400;
+    line-height: 1;
+    color: rgba(var(--clr), 0.8) !important;
+    transition-property: color;
+    transition-duration: var(--duration);
+    background: none !important;
+}
+
+@media (any-hover: hover) {
+    .select2-dropdown.select__dropdown .select2-results__option:hover {
+        color: rgba(var(--clr), 1) !important;
+    }
+}
+
+.select2-dropdown.select__dropdown .select2-results__option--selected {
+    color: rgb(var(--clr-focus)) !important;
+}
+
+/*
+<div class="inputs radio">
+  <div class="radio__wrapper">
+    <span class="radio__label">Пол <span>*</span></span>
+
+    <div class="radio__body">
+      <label class="radio__group">
+        <input
+          checked
+          class="radio__input"
+          type="radio"
+          name="sex"
+          value="male"
+        />
+
+        <span class="radio__text"><span>Мужской</span></span>
+      </label>
+      <label class="radio__group">
+        <input class="radio__input" type="radio" name="sex" value="female" />
+
+        <span class="radio__text"><span>Женский</span></span>
+      </label>
+    </div>
+  </div>
+
+  <span class="inputs__text-error">Неверно заполненное поле</span>
+</div>
+*/
+.radio__label {
+    margin: 0 0 0.333em 0;
+    display: block;
+    font-size: var(--label-fs);
+    font-weight: 400;
+    line-height: 1.333;
+    color: rgb(var(--label-clr));
+}
+
+.radio__label span {
+    color: rgb(var(--marker-clr));
+}
+
+.radio__body {
+    padding: 0.313rem;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid rgb(var(--border-clr));
+    border-radius: var(--br);
+}
+
+.radio__group {
+    flex: 1 1 auto;
+}
+
+@media (any-hover: hover) {
+    .radio__group:hover .radio__text {
+        color: rgb(var(--clr-focus));
+    }
+}
+
+.radio__input {
+    position: fixed;
+    top: -100%;
+    left: -100%;
+    z-index: -999;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.radio__input:checked + .radio__text {
+    color: rgb(var(--color-04));
+}
+
+.radio__input:checked + .radio__text::after {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.radio__text {
+    min-height: calc(var(--height) - 0.625rem);
+    padding: 0.278em 0.556em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--fs);
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.333;
+    color: rgb(var(--clr));
+    position: relative;
+    cursor: pointer;
+    border-radius: calc(var(--br) - 0.313rem);
+    transition-property: color;
+    transition-duration: 0.2s;
+}
+
+.radio__text::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: rgb(151, 12, 152);
+    box-shadow: inset 2px 3px 8px 0px rgba(255, 255, 255, 0.4), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.35), inset 2px -3px 15px 0px rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition-property: opacity, visibility, transform;
+    transition-duration: 0.2s;
+}
+
+.radio__text span {
+    position: relative;
+    z-index: 1;
+}
+
+/*
+<div class="checkbox">
+  <div class="checkbox__wrapper">
+    <label class="checkbox__gropu">
+      <input class="checkbox__input" type="checkbox" />
+
+      <div class="checkbox__icon">
+        <img src="../images/inputs/check.svg" alt="check" />
+      </div>
+
+      <p class="checkbox__text">Текст</p>
+    </label>
+  </div>
+</div>
+*/
+.checkbox__wrapper {
+    display: flex;
+}
+
+.checkbox__gropu {
+    display: flex;
+    cursor: pointer;
+}
+
+@media (any-hover: hover) {
+    .checkbox__gropu:hover .checkbox__icon {
+        border-color: rgb(var(--color-02));
+    }
+}
+
+.checkbox__input {
+    position: fixed;
+    top: -100%;
+    left: -100%;
+    z-index: -999;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.checkbox__input:checked + .checkbox__icon {
+    border-color: transparent;
+}
+
+.checkbox__input:checked + .checkbox__icon::after,
+.checkbox__input:checked + .checkbox__icon img {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.checkbox__icon {
+    flex: 0 0 2.188rem;
+    width: 2.188rem;
+    height: 2.188rem;
+    margin: 0 0.625rem 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.625rem;
+    position: relative;
+    border: 1px solid rgba(var(--color-01), 0.3);
+    transition: border 0.2s linear;
+}
+
+.checkbox__icon::after {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2) 100%), rgb(151, 12, 152);
+    box-shadow: inset 2px 3px 10px 0px rgba(255, 255, 255, 0.4), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.35), inset 2px -3px 15px 0px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition-property: opacity, visibility, transform;
+    transition-duration: 0.2s;
+}
+
+.checkbox__icon img {
+    flex: 0 0 1rem;
+    width: 1rem;
+    position: relative;
+    z-index: 1;
+    -o-object-fit: contain;
+    object-fit: contain;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition-property: opacity, visibility, transform;
+    transition-duration: 0.2s;
+}
+
+.checkbox__text {
+    display: block;
+    font-size: 0.75rem;
+    line-height: 1.667;
+    color: rgb(var(--color-01));
+}
+
+.checkbox__text span,
+.checkbox__text a {
+    text-decoration: underline;
+}
+
+@media (any-hover: hover) {
+    .checkbox__text span:hover,
+  .checkbox__text a:hover {
+        text-decoration: none;
+    }
+}
+
+.wrapper-primary {
+    padding: 2.188rem 1.875rem;
+    margin: 0.625rem calc(-1 * var(--container-pi)) 3.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 1.25rem;
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 10px 30px 75px 0px rgba(68, 40, 94, 0.1), inset 5px 5px 25px 0px rgba(255, 255, 255, 0.5);
+    position: relative;
+}
+
+.wrapper-primary::after {
+    content: "";
+    width: 788px;
+    height: 0;
+    padding: 0 0 546px 0;
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    z-index: -1;
+    transform: translate3d(-50%, 0, 0);
+    background-image: url("../images/wrapper-primary/dekor_01.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: blur(40px);
+}
+
+@media (min-width: 576px) {
+    .wrapper-primary {
+        padding: 2.813rem 1.875rem;
+        margin: 0 auto 5rem auto;
+    }
+}
+
+@media (min-width: 992px) {
+    .wrapper-primary {
+        padding: 2.813rem 3.125rem;
+        border-radius: 1.875rem;
+    }
+}
+
+.decors__decor,
+.decor__decor-figure {
+    position: absolute;
+    z-index: -1;
+}
+
+.decors__decor_01 {
+    min-width: 36.25rem;
+    top: 220px;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+    filter: blur(30px);
+    opacity: 0.7;
+}
+
+@media (min-width: 768px) {
+    .decors__decor_01 {
+        min-width: 22.75rem;
+        top: 323px;
+        left: 70px;
+        transform: none;
+        opacity: 1;
+    }
+}
+
+.decors__decor_02 {
+    width: 10.313rem;
+    top: 1275px;
+    left: -50px;
+    filter: blur(30px);
+    opacity: 0.5;
+}
+
+@media (min-width: 768px) {
+    .decors__decor_02 {
+        width: 10.313rem;
+        top: 930px;
+        right: 165px;
+        left: auto;
+        opacity: 0.8;
+    }
+}
+
+.decor__decor-figure {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .decor__decor-figure {
+        display: block;
+    }
+}
+
+.decor__decor-figure_01 {
+    top: 105px;
+    left: 10px;
+}
+
+.decor__decor-figure_02 {
+    top: 160px;
+    right: 125px;
+}
+
+.decor__decor-figure_03 {
+    top: 580px;
+    left: 170px;
+}
+
+.decor__decor-figure_04 {
+    top: 625px;
+    right: 230px;
+}
+
+.decor__decor-figure_05 {
+    top: 690px;
+    right: 50px;
+}
+
+.decor__decor-figure_06 {
+    top: 905px;
+    left: 70px;
+}
+
+.profile__wrapper {
+    padding: 1.25rem 0 5rem 0;
+}
+
+@media (min-width: 768px) {
+    .profile__wrapper {
+        padding: 1.25rem 0 7.5rem 0;
+    }
+}
+
+.profile__body {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 576px) {
+    .profile__body {
+        align-items: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .profile__body {
+        max-width: 54.375rem;
+        margin: 0 auto;
+    }
+}
+
+.profile__tab-bodys.wrapper-primary {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.profile__tab-bodys.wrapper-primary::after {
+    display: none;
+}
+
+@media (min-width: 576px) {
+    .profile__tab-bodys {
+        width: 100%;
+    }
+}
+
+.profile__tab-body,
+.profile__group-current,
+.profile__edit {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition-property: opacity, visibility, transform;
+    transition-duration: 0.6s;
+}
+
+.profile__tab-body.active,
+.profile__group-current.active,
+.profile__edit.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.profile__text,
+.profile__profile-text {
+    display: block;
+    font-size: 0.938rem;
+    line-height: 1.667;
+    color: rgba(var(--color-01), 1);
+}
+
+.profile__text {
+    padding: 1.875rem 0 3.125rem 0;
+    text-align: center;
+    color: rgba(var(--color-01), 0.7);
+}
+
+.profile__text a {
+    color: rgba(var(--color-02), 1);
+}
+
+@media (min-width: 768px) {
+    .profile__text {
+        padding: 1.875rem 0 3.75rem 0;
+    }
+}
+
+.profile__footer {
+    padding: 1.875rem;
+    margin: 0 calc(-1 * var(--container-pi));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1.25rem;
+    position: relative;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 10px 30px 75px 0px rgba(68, 40, 94, 0.1), inset 5px 5px 25px 0px rgba(255, 255, 255, 0.5);
+}
+
+@media (min-width: 576px) {
+    .profile__footer {
+        margin: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .profile__footer {
+        padding: 1.875rem 3.75rem 1.875rem 2.5rem;
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 1200px) {
+    .profile__footer {
+        border-width: 0;
+        background: none;
+        box-shadow: none;
+    }
+}
+
+@media (min-width: 1600px) {
+    .profile__footer {
+        border-width: 1px;
+        background: rgba(255, 255, 255, 0.6);
+        box-shadow: 10px 30px 75px 0px rgba(68, 40, 94, 0.1), inset 5px 5px 25px 0px rgba(255, 255, 255, 0.5);
+    }
+}
+
+.profile__footer-decor {
+    display: none;
+}
+
+@media (min-width: 1200px) {
+    .profile__footer-decor {
+        width: 1393px;
+        display: block;
+        position: absolute;
+        top: -45px;
+        left: -66px;
+        z-index: -1;
+    }
+}
+
+@media (min-width: 1600px) {
+    .profile__footer-decor {
+        display: none;
+    }
+}
+
+.profile__footer-icon {
+    flex: 0 0 5rem;
+    width: 5rem;
+    height: 5rem;
+    margin: 0 0 0.938rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.08) 82.958%);
+    box-shadow: 2px 4px 10px 0px rgba(95, 46, 133, 0.08), -2px -2px 14px 0px rgba(255, 255, 255, 0.6), inset 0px 2px 2px 0px rgba(21, 17, 39, 0.05), inset -2px -2px 0px 0px rgba(255, 255, 255, 0.25);
+}
+
+@media (min-width: 768px) {
+    .profile__footer-icon {
+        margin: 0 1.875rem 0 0;
+    }
+}
+
+.profile__profile-text {
+    margin: 0 0 1.25rem 0;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .profile__profile-text {
+        flex: 0 1 24.375rem;
+        margin: 0 2.5rem 0 0;
+        text-align: left;
+    }
+}
+
+@media (min-width: 576px) {
+    .profile__footer-button {
+        max-width: 14.375rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .profile__footer-button {
+        flex: 0 1 14.375rem;
+    }
+}
+
+.profile__tab-buttons {
+    padding: 0 0.625rem;
+    display: flex;
+}
+
+@media (min-width: 768px) {
+    .profile__tab-buttons {
+        padding: 0;
+    }
+}
+
+.profile__tab-button {
+    flex: 1 1 auto;
+    padding: 0.625rem;
+    display: block;
+    cursor: pointer;
+    font-family: "BalsamiqSans";
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.5;
+    color: rgba(var(--color-01), 0.7);
+    position: relative;
+    overflow: hidden;
+    transition: color 0.1s linear;
+}
+
+.profile__tab-button::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 1px;
+    background: rgb(var(--color-02));
+    transform: translate3d(0, 100%, 0);
+    transition: transform 0.1s linear;
+}
+
+@media (any-hover: hover) {
+    .profile__tab-button:not(.active):hover {
+        color: rgb(var(--color-02));
+    }
+}
+
+.profile__tab-button.active {
+    color: rgba(var(--color-01), 1);
+}
+
+.profile__tab-button.active::after {
+    transform: translate3d(0, 0, 0);
+}
+
+@media (min-width: 576px) {
+    .profile__tab-button {
+        padding: 1.25rem;
+        font-size: 1.25rem;
+    }
+}
+
+.profile__group-current,
+.profile__group-edit,
+.profile__group-footer {
+    display: grid;
+    grid-auto-flow: dense;
+    gap: 1.875rem 0.938rem;
+}
+
+@media (min-width: 576px) {
+    .profile__group-current,
+  .profile__group-edit,
+  .profile__group-footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .profile__group-current,
+  .profile__group-edit,
+  .profile__group-footer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .profile__group-current,
+  .profile__group-edit,
+  .profile__group-footer {
+        gap: 1.875rem;
+    }
+}
+
+@media (min-width: 576px) {
+    .profile__grop-2-cell {
+        grid-column-end: span 2;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.profile__group-footer {
+    grid-column: 1/-1;
+}
+
+.profile__current-label {
+    margin: 0 0 0.667em 0;
+    display: block;
+    font-size: var(--label-fs);
+    line-height: 1.333;
+    color: rgb(var(--label-clr));
+}
+
+.profile__current-label span {
+    color: rgb(var(--marker-clr));
+}
+
+.profile__current-value {
+    display: block;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: rgb(var(--color-01));
 }

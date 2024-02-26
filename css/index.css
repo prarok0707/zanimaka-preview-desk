@@ -676,6 +676,14 @@ body.no-scroll {
     }
 }
 
+.footer__dekor_04 {
+    max-width: 260px;
+    left: -55px;
+    bottom: -100px;
+    filter: blur(40px);
+    opacity: 0.8;
+}
+
 .footer__wrapper {
     padding: 1.875rem 0;
 }
@@ -766,11 +774,24 @@ body.no-scroll {
     font-weight: 500;
     line-height: 1.75;
     color: rgb(var(--color-01));
+    transition: color 0.1s linear;
 }
 
 @media (min-width: 992px) {
     .footer__contacts-value {
         font-size: 1.25rem;
+    }
+}
+
+@media (any-hover: hover) {
+    a.footer__contacts-value:hover {
+        color: rgb(var(--color-02));
+    }
+}
+
+@media (any-hover: none) {
+    a.footer__contacts-value:active {
+        color: rgb(var(--color-02));
     }
 }
 

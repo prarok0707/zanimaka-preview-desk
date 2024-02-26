@@ -11,7 +11,7 @@
     <meta name="google" content="notranslate" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="description" content="" />
-    <title>Проверка данных</title>
+    <title>Попапы</title>
     <link rel="stylesheet" href="./css/insides.min.css" />
   </head>
   <body>
@@ -46,190 +46,145 @@
         </div>
       </header>
       <main class="content">
-        <section class="data-check">
+        <div class="popup-preview">
           <div class="container">
-            <div class="current-step">
-              <div class="current-step__wrapper">
-                <div class="current-step__items">
-                  <span class="current-step__item active">01</span>
-                  <div class="current-step__divide"></div>
-                  <span class="current-step__item active">02</span>
-                  <div class="current-step__divide"></div>
-                  <span class="current-step__item active">03</span>
-                  <div class="current-step__divide"></div>
-                  <span class="current-step__item current">04</span>
+            <div
+              class="popup-preview__wrapper wrapper-primary"
+              style="max-width: 500px"
+            >
+              <div
+                class="popup-preview__actions"
+                style="display: grid; gap: 30px"
+              >
+                <button
+                  class="popup-preview__action button"
+                  type="button"
+                  data-popup-id="application"
+                >
+                  <span class="button__content">Одобрение заявки</span>
+                </button>
+                <button
+                  class="popup-preview__action button"
+                  type="button"
+                  data-popup-id="refresh-password"
+                >
+                  <span class="button__content">Востановление пароля</span>
+                </button>
+                <button
+                  class="popup-preview__action button"
+                  type="button"
+                  data-popup-id="cancel-card"
+                >
+                  <span class="button__content">Пропуск ввода карты</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div id="application" class="popup" data-popup>
+            <div class="popup__wrapper" data-popup-wrapper>
+              <div class="popup__body">
+                <div class="popup__body-wrapper" data-popup-body>
+                  <div class="popup__close" data-popup-close>
+                    <svg>
+                      <use
+                        href="./images/sprite.svg#close"
+                        xlink:href="./images/sprite.svg#close"
+                      ></use>
+                    </svg>
+                  </div>
+                  <div class="popup__image">
+                    <img src="./images/popup/img_01.svg" alt="image" />
+                  </div>
+                  <h2 class="popup__title title">
+                    Ваша заявка успешно подана!
+                  </h2>
+                  <p class="popup__text">
+                    Ожидайте подбора компаний, которые выдадут вам займ. Это
+                    займет всего несколько минут!
+                  </p>
+                  <div class="popup__actions">
+                    <a class="popup__action button" href="./index.html"
+                      ><span class="button__content">На главную</span></a
+                    >
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="data-check__wrapper wrapper-primary">
-              <h2 class="data-check__title insides-title">
-                Проверяем ваши данные
-              </h2>
-              <span class="data-check__subtitle"
-                >Наши алгоритмы обрабатывают введенную Вами информацию. Это
-                займет менее 10 секунд. Пожалуйста, не закрывайте
-                страницу.</span
-              >
-              <div class="data-check__body">
-                <svg
-                  viewBox="0 0 255 255"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle
-                    cx="127.5"
-                    cy="127.5"
-                    r="126.5"
-                    stroke="url(#paint0_linear_1_6)"
-                    stroke-width="2"
-                  />
-                  <circle
-                    cx="127.5"
-                    cy="127.5"
-                    r="126.5"
-                    stroke="url(#paint1_linear_1_6)"
-                    stroke-width="2"
-                  />
-                  <circle
-                    cx="127.5"
-                    cy="127.5"
-                    r="107.5"
-                    stroke="url(#paint2_linear_1_6)"
-                    stroke-width="40"
-                  />
-                  <circle
-                    class="data-check__circle"
-                    cx="127.5"
-                    cy="127.5"
-                    r="107.5"
-                    transform="rotate(-90 127.5 127.5)"
-                    stroke="url(#paint3_linear_1_6)"
-                    stroke-width="30"
-                    stroke-linecap="round"
-                    stroke-dasharray="0, 674"
-                  />
-                  <g filter="url(#filter0_i_1_6)">
-                    <circle
-                      cx="127.5"
-                      cy="127.5"
-                      r="87.5"
-                      fill="url(#paint4_linear_1_6)"
-                    />
-                  </g>
-                  <defs>
-                    <filter
-                      id="filter0_i_1_6"
-                      x="40"
-                      y="40"
-                      width="180"
-                      height="182.1"
-                      filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
-                    >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                      <feBlend
-                        mode="normal"
-                        in="SourceGraphic"
-                        in2="BackgroundImageFix"
-                        result="shape"
-                      />
-                      <feColorMatrix
-                        in="SourceAlpha"
-                        type="matrix"
-                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                        result="hardAlpha"
-                      />
-                      <feMorphology
-                        radius="3"
-                        operator="dilate"
-                        in="SourceAlpha"
-                        result="effect1_innerShadow_1_6"
-                      />
-                      <feOffset dx="5" dy="11" />
-                      <feGaussianBlur stdDeviation="5.05" />
-                      <feComposite
-                        in2="hardAlpha"
-                        operator="arithmetic"
-                        k2="-1"
-                        k3="1"
-                      />
-                      <feColorMatrix
-                        type="matrix"
-                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
-                      />
-                      <feBlend
-                        mode="normal"
-                        in2="shape"
-                        result="effect1_innerShadow_1_6"
-                      />
-                    </filter>
-                    <linearGradient
-                      id="paint0_linear_1_6"
-                      x1="219"
-                      y1="242"
-                      x2="146"
-                      y2="141.5"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop stop-color="white" />
-                      <stop offset="1" stop-color="#D8D8D8" stop-opacity="0" />
-                      <stop offset="1" stop-color="#D8D8D8" stop-opacity="0" />
-                    </linearGradient>
-                    <linearGradient
-                      id="paint1_linear_1_6"
-                      x1="62"
-                      y1="9.50002"
-                      x2="127"
-                      y2="127"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop stop-color="#D8D8D8" />
-                      <stop offset="1" stop-color="#D8D8D8" stop-opacity="0" />
-                      <stop offset="1" stop-color="#D8D8D8" stop-opacity="0" />
-                    </linearGradient>
-                    <linearGradient
-                      id="paint2_linear_1_6"
-                      x1="40"
-                      y1="-36"
-                      x2="151.5"
-                      y2="177"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop stop-color="#D8D8D8" stop-opacity="0.13" />
-                      <stop offset="1" stop-opacity="0" />
-                    </linearGradient>
-                    <linearGradient
-                      id="paint3_linear_1_6"
-                      x1="147"
-                      y1="9.99999"
-                      x2="-167"
-                      y2="417.5"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop offset="0.055" stop-color="#970C98" />
-                      <stop offset="1" />
-                    </linearGradient>
-                    <linearGradient
-                      id="paint4_linear_1_6"
-                      x1="67.5"
-                      y1="50"
-                      x2="180"
-                      y2="192.5"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop stop-color="#F2E3F3" />
-                      <stop offset="1" stop-color="white" />
-                    </linearGradient>
-                  </defs>
-                </svg>
-                <span class="data-check__percent"></span>
+          </div>
+          <div id="refresh-password" class="popup" data-popup>
+            <div class="popup__wrapper" data-popup-wrapper>
+              <div class="popup__body">
+                <div class="popup__body-wrapper" data-popup-body>
+                  <div class="popup__close" data-popup-close>
+                    <svg>
+                      <use
+                        href="./images/sprite.svg#close"
+                        xlink:href="./images/sprite.svg#close"
+                      ></use>
+                    </svg>
+                  </div>
+                  <div class="popup__image">
+                    <img src="./images/popup/img_02.svg" alt="image" />
+                  </div>
+                  <h2 class="popup__title title">Восстановление пароля</h2>
+                  <p class="popup__text">
+                    На вашу почту будет отправлено письмо с подробной
+                    инструкцией
+                  </p>
+                  <form class="popup__form">
+                    <div class="popup__inputs">
+                      <div class="popup__input inputs input">
+                        <div class="input__wrapper">
+                          <span class="input__label">Email <span>*</span></span>
+                          <div class="input__group">
+                            <input class="input__target" type="text" />
+                          </div>
+                        </div>
+                        <span class="inputs__text-error"
+                          >Неверно заполненное поле</span
+                        >
+                      </div>
+                    </div>
+                    <div class="popup__actions">
+                      <button class="popup__action button" type="submit">
+                        <span class="button__content">Продолжить</span>
+                      </button>
+                    </div>
+                  </form>
+                </div>
               </div>
-              <button class="data-check__button button" type="button">
-                <span class="button__content">Продолжить</span>
-              </button>
             </div>
           </div>
-        </section>
+          <div id="cancel-card" class="popup" data-popup>
+            <div class="popup__wrapper" data-popup-wrapper>
+              <div class="popup__body">
+                <div class="popup__body-wrapper" data-popup-body>
+                  <div class="popup__close" data-popup-close>
+                    <svg>
+                      <use
+                        href="./images/sprite.svg#close"
+                        xlink:href="./images/sprite.svg#close"
+                      ></use>
+                    </svg>
+                  </div>
+                  <h2 class="popup__title title">
+                    Вы уверены, что хотите пропустить ввод карты?
+                  </h2>
+                  <p class="popup__text">
+                    Без карты невозможно получить онлайн займ на карту. Данные
+                    карты, которые вы вводите, надежно защищены и не передаются
+                    третьим лицам.
+                  </p>
+                  <div class="popup__actions">
+                    <button class="popup__action button" type="button">
+                      <span class="button__content">Активировать</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
       <footer class="footer">
         <img
