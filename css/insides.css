@@ -529,9 +529,7 @@ body.no-scroll {
     position: fixed;
     inset: 0;
     z-index: -1;
-    background: rgba(var(--color-05), 0.1);
-    -webkit-backdrop-filter: blur(15px);
-    backdrop-filter: blur(15px);
+    background: rgb(var(--color-03));
     transform: translate3d(0, -10px, 0);
     opacity: 0;
     visibility: hidden;
