@@ -629,6 +629,7 @@ body.no-scroll {
 
 .footer__dekor {
     display: block;
+    display: none !important;
     position: absolute;
     z-index: -1;
 }

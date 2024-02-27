@@ -629,6 +629,7 @@ body.no-scroll {
 
 .footer__dekor {
     display: block;
+    display: none !important;
     position: absolute;
     z-index: -1;
 }
@@ -1370,6 +1371,10 @@ body.no-scroll {
     }
 }
 
+.decors {
+    display: none;
+}
+
 .decors__decor,
 .decor__decor-figure {
     position: absolute;
@@ -1498,7 +1503,7 @@ body.no-scroll {
 
 .profile__tab-body,
 .profile__group-current,
-.profile__edit {
+.profile__group-edit {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -1508,7 +1513,7 @@ body.no-scroll {
 
 .profile__tab-body.active,
 .profile__group-current.active,
-.profile__edit.active {
+.profile__group-edit.active {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
