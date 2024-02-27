@@ -546,10 +546,6 @@ body.no-scroll {
     .header__mobile-menu {
         display: none;
     }
-
-    .header__mobile-menu::after {
-        display: none;
-    }
 }
 
 .header__mobile-wrapper {
@@ -627,7 +623,6 @@ body.no-scroll {
 
 .footer__dekor {
     display: block;
-    display: none !important;
     position: absolute;
     z-index: -1;
 }
@@ -1686,10 +1681,6 @@ body.no-scroll {
     line-height: 1.111;
     color: rgb(var(--color-01));
     transition: color 0.2s linear;
-}
-
-.decors {
-    display: none;
 }
 
 .decors__decor,
