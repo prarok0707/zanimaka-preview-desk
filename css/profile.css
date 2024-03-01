@@ -644,6 +644,7 @@ body.no-scroll {
     display: block;
     position: absolute;
     z-index: -1;
+    transform: translate3d(0, 0, 0);
 }
 
 .footer__dekor_01 {
