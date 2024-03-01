@@ -77,6 +77,13 @@
                 >
                   <span class="button__content">Пропуск ввода карты</span>
                 </button>
+                <button
+                  class="popup-preview__action button"
+                  type="button"
+                  data-popup-id="agreement"
+                >
+                  <span class="button__content">Соглашения</span>
+                </button>
               </div>
             </div>
           </div>
@@ -178,6 +185,38 @@
                   <div class="popup__actions">
                     <button class="popup__action button" type="button">
                       <span class="button__content">Активировать</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="agreement" class="popup" data-popup>
+            <div class="popup__wrapper" data-popup-wrapper>
+              <div class="popup__body">
+                <div class="popup__body-wrapper" data-popup-body>
+                  <div class="popup__close" data-popup-close>
+                    <svg>
+                      <use
+                        href="./images/sprite.svg#close"
+                        xlink:href="./images/sprite.svg#close"
+                      ></use>
+                    </svg>
+                  </div>
+                  <h2 class="popup__title title">Соглашения</h2>
+                  <p class="popup__text">
+                    Даю свое согласие на
+                    <a href="#">обработку персональных данных</a> и на получение
+                    рекламных материалов, принимаю условия публичной оферты,
+                    соглашение о применении рекуррентных платежей и тарифы
+                    сервиса. Осознаю, что оплата услуг не гарантирует получение
+                    займа. Настоящим подтверждаю, что не являюсь получателем
+                    единовременных и/или регулярных денежных выплат,
+                    предусмотренных Указами Президента РФ.
+                  </p>
+                  <div class="popup__actions">
+                    <button class="popup__action button" type="button">
+                      <span class="button__content">Далее</span>
                     </button>
                   </div>
                 </div>

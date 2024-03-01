@@ -11,7 +11,7 @@
     <meta name="google" content="notranslate" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="description" content="" />
-    <title>Контактная информация</title>
+    <title>Форма обратной связи</title>
     <link rel="stylesheet" href="./css/insides.min.css" />
   </head>
   <body>
@@ -46,139 +46,67 @@
         </div>
       </header>
       <main class="content">
-        <section class="contacts-info">
+        <section class="feedback">
           <div class="container">
-            <div class="current-step">
-              <div class="current-step__wrapper">
-                <div class="current-step__items">
-                  <span class="current-step__item current">01</span>
-                  <div class="current-step__divide"></div>
-                  <span class="current-step__item">02</span>
-                  <div class="current-step__divide"></div>
-                  <span class="current-step__item">03</span>
-                  <div class="current-step__divide"></div>
-                  <span class="current-step__item">04</span>
-                </div>
-              </div>
-            </div>
-            <form class="contacts-info__form wrapper-primary">
-              <h2 class="contacts__title insides-title">
-                Контактная информация
-              </h2>
-              <div class="contacts-info__inputs">
-                <div class="inputs input">
-                  <div class="input__wrapper">
-                    <span class="input__label"
-                      >Номер телефона <span>*</span></span
-                    >
-                    <div class="input__group">
-                      <input class="input__target" type="text" value="+7" />
+            <div class="feedback__wrapper wrapper-primary">
+              <h3 class="feedback__title insides-title">
+                Форма обратной связи
+              </h3>
+              <form class="feedback__form">
+                <div class="feedback__inputs">
+                  <div class="feedback__row">
+                    <div class="inputs input">
+                      <div class="input__wrapper">
+                        <span class="input__label">Имя <span>*</span></span>
+                        <div class="input__group">
+                          <input class="input__target" type="text" />
+                        </div>
+                      </div>
+                      <span class="inputs__text-error"
+                        >Неверно заполненное поле</span
+                      >
+                    </div>
+                    <div class="inputs input">
+                      <div class="input__wrapper">
+                        <span class="input__label"
+                          >Номер телефона <span>*</span></span
+                        >
+                        <div class="input__group">
+                          <input class="input__target" type="text" />
+                        </div>
+                      </div>
+                      <span class="inputs__text-error"
+                        >Неверно заполненное поле</span
+                      >
                     </div>
                   </div>
-                  <span class="inputs__text-error"
-                    >Неверно заполненное поле</span
-                  >
-                </div>
-                <div class="inputs input">
-                  <div class="input__wrapper">
-                    <span class="input__label">Email</span>
-                    <div class="input__group">
-                      <input
-                        class="input__target"
-                        type="email"
-                        placeholder="введите: 'm'"
-                        data-autocomplete
-                      />
+                  <div class="inputs input">
+                    <div class="input__wrapper">
+                      <span class="input__label">Почта <span>*</span></span>
+                      <div class="input__group">
+                        <input class="input__target" type="text" />
+                      </div>
                     </div>
+                    <span class="inputs__text-error"
+                      >Неверно заполненное поле</span
+                    >
                   </div>
-                  <span class="inputs__text-error"
-                    >Неверно заполненное поле</span
-                  >
-                </div>
-              </div>
-              <div class="contacts-info__checkboxes">
-                <div class="checkbox">
-                  <div class="checkbox__wrapper">
-                    <label class="checkbox__gropu"
-                      ><input class="checkbox__input" type="checkbox" />
-                      <div class="checkbox__icon">
-                        <img src="./images/inputs/check.svg" alt="check" />
+                  <div class="inputs input">
+                    <div class="input__wrapper">
+                      <span class="input__label">Сообщение <span>*</span></span>
+                      <div class="input__group">
+                        <textarea class="input__target"></textarea>
                       </div>
-                      <p class="checkbox__text">
-                        Я ознакомлен и согласен со
-                        <span data-popup-id="id_popup">следующим</span>
-                      </p></label
+                    </div>
+                    <span class="inputs__text-error"
+                      >Неверно заполненное поле</span
                     >
                   </div>
                 </div>
-                <div class="checkbox">
-                  <div class="checkbox__wrapper">
-                    <label class="checkbox__gropu"
-                      ><input class="checkbox__input" type="checkbox" />
-                      <div class="checkbox__icon">
-                        <img src="./images/inputs/check.svg" alt="check" />
-                      </div>
-                      <p class="checkbox__text">
-                        Совершая любые действия на сайте, вы даете свое Согласие
-                        на обработку персональных данных, Согласие на получение
-                        рекламных материалов и Согласие на подписку. Вы
-                        ознакомились и соглашаетесь с Договором публичной
-                        оферты, Политикой Конфиденциальности.
-                      </p></label
-                    >
-                  </div>
-                </div>
-                <div class="checkbox">
-                  <div class="checkbox__wrapper">
-                    <label class="checkbox__gropu"
-                      ><input class="checkbox__input" type="checkbox" />
-                      <div class="checkbox__icon">
-                        <img src="./images/inputs/check.svg" alt="check" />
-                      </div>
-                      <p class="checkbox__text">
-                        Cоглашаюсь с автоматическими платежами. Стоимость
-                        активации 1 рубль. Далее 399 рублей каждые 5 дней
-                        использования, начиная с первого дня!
-                      </p></label
-                    >
-                  </div>
-                </div>
-              </div>
-              <button class="contacts-info__submit button" type="submit">
-                <span class="button__content">Продолжить</span>
-              </button>
-            </form>
-          </div>
-          <div id="id_popup" class="popup" data-popup>
-            <div class="popup__wrapper" data-popup-wrapper>
-              <div class="popup__body">
-                <div class="popup__body-wrapper" data-popup-body>
-                  <div class="popup__close" data-popup-close>
-                    <svg>
-                      <use
-                        href="./images/sprite.svg#close"
-                        xlink:href="./images/sprite.svg#close"
-                      ></use>
-                    </svg>
-                  </div>
-                  <h2 class="popup__title title">Соглашения</h2>
-                  <p class="popup__text">
-                    Даю свое согласие на
-                    <a href="#">обработку персональных данных</a> и на получение
-                    рекламных материалов, принимаю условия публичной оферты,
-                    соглашение о применении рекуррентных платежей и тарифы
-                    сервиса. Осознаю, что оплата услуг не гарантирует получение
-                    займа. Настоящим подтверждаю, что не являюсь получателем
-                    единовременных и/или регулярных денежных выплат,
-                    предусмотренных Указами Президента РФ.
-                  </p>
-                  <div class="popup__actions">
-                    <button class="popup__action button" type="button">
-                      <span class="button__content">Далее</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
+                <button class="feedback__submit button" type="submit">
+                  <span class="button__content">Отправить</span>
+                </button>
+              </form>
             </div>
           </div>
         </section>

@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="./css/profile.min.css" />
   </head>
   <body>
-    <div class="wrapper">
+    <div class="wrapper" data-tab="profile">
       <header class="header" data-menu>
         <div class="container">
           <div class="header__wrapper">
@@ -25,7 +25,7 @@
             <div class="header__row">
               <a class="header__link" href="#">Оформить заявку</a>
               <button class="header__button button-secondary" type="button">
-                <span class="button-secondary__content">Войти</span>
+                <span class="button-secondary__content">Выход</span>
               </button>
             </div>
             <div class="header__menu-toggle" data-menu-toggle>
@@ -35,10 +35,39 @@
             </div>
             <div class="header__mobile-menu">
               <div class="header__mobile-wrapper">
+                <span class="header__link" data-tab-button="scoring"
+                  >Скоринг</span
+                >
+                <span class="header__link" data-tab-button="profile-settings"
+                  >Профиль</span
+                >
+                <span class="header__link" data-tab-button="events"
+                  >Лента событий</span
+                >
+                <span class="header__link" data-tab-button="subscription"
+                  >Подписка</span
+                >
+                <span class="header__link" data-tab-button="newsletter"
+                  >Рассылка</span
+                >
+                <span class="header__link" data-tab-button="documents"
+                  >Документы</span
+                >
+                <span class="header__link" data-tab-button="feedback"
+                  >Обратная связь</span
+                >
+                <span class="header__link" data-tab-button="profile-about"
+                  >О сервисе</span
+                >
                 <a class="header__link" href="#">+8 (800) 444-13-18</a>
                 <a class="header__link" href="#">Оформить заявку</a>
-                <button class="header__button button-secondary" type="button">
-                  <span class="button-secondary__content">Войти</span>
+                <a class="header__link" href="#">Выход</a>
+                <button
+                  class="header__button button-secondary"
+                  type="button"
+                  data-tab-button="offers"
+                >
+                  <span class="button-secondary__content">Мои предложения</span>
                 </button>
               </div>
             </div>
@@ -46,7 +75,7 @@
         </div>
       </header>
       <main class="content">
-        <div class="profile" data-tab="profile">
+        <div class="profile">
           <div class="decors">
             <img
               class="decors__decor decors__decor_01"
@@ -91,342 +120,1987 @@
           </div>
           <div class="container">
             <div class="profile__wrapper">
-              <div class="profile__body">
-                <div class="profile__tab-buttons">
-                  <span
-                    class="profile__tab-button active"
-                    data-tab-button="contacts"
-                    >Контактная информация</span
+              <div class="profile__tab-buttons">
+                <span
+                  class="profile__tab-button active"
+                  data-tab-button="scoring"
+                  >Скоринг</span
+                >
+                <span
+                  class="profile__tab-button"
+                  data-tab-button="profile-settings"
+                  >Профиль</span
+                >
+                <span class="profile__tab-button" data-tab-button="events"
+                  >Лента событий</span
+                >
+                <span class="profile__tab-button" data-tab-button="subscription"
+                  >Подписка</span
+                >
+                <span class="profile__tab-button" data-tab-button="newsletter"
+                  >Рассылка</span
+                >
+                <span class="profile__tab-button" data-tab-button="documents"
+                  >Документы</span
+                >
+                <span class="profile__tab-button" data-tab-button="feedback"
+                  >Обратная связь</span
+                >
+                <span
+                  class="profile__tab-button"
+                  data-tab-button="profile-about"
+                  >О сервисе</span
+                >
+                <a class="profile__tab-button" href="#">Выход</a>
+                <div class="profile__tab-button">
+                  <button
+                    class="button-secondary"
+                    type="button"
+                    data-tab-button="offers"
                   >
-                  <span class="profile__tab-button" data-tab-button="passport"
-                    >Паспортные данные</span
-                  >
+                    <span class="button-secondary__content"
+                      >Мои предложения</span
+                    >
+                  </button>
                 </div>
+              </div>
+              <div class="profile__body">
                 <div class="profile__tab-bodys wrapper-primary">
-                  <div
-                    class="profile__tab-body active"
-                    data-tab-body="contacts"
+                  <section
+                    class="profile__scoring scoring active"
+                    data-tab-body="scoring"
                   >
-                    <div class="profile__group" data-toggle-card>
-                      <div
-                        class="profile__group-current active"
-                        data-toggle-current
-                      >
-                        <div class="profile__current inputs">
-                          <span class="profile__current-label">Фамилия</span>
-                          <span class="profile__current-value">Вертишина</span>
-                        </div>
-                        <div class="profile__current inputs">
-                          <span class="profile__current-label">Имя</span>
-                          <span class="profile__current-value">Анастасия</span>
-                        </div>
-                        <div class="profile__current inputs">
-                          <span class="profile__current-label">Отчество</span>
-                          <span class="profile__current-value">-</span>
-                        </div>
-                        <div class="profile__current inputs">
-                          <span class="profile__current-label"
-                            >Телефон <span>*</span></span
+                    <div class="scoring__wrapper">
+                      <h3 class="scoring__title profile-title">Скоринг</h3>
+                      <div class="scoring__body">
+                        <div class="scoring__current">
+                          <svg
+                            viewBox="0 0 255 255"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
                           >
-                          <span class="profile__current-value"
-                            >+8 (050) 444-13-24</span
+                            <circle
+                              cx="127.5"
+                              cy="127.5"
+                              r="126.5"
+                              stroke="url(#paint0_linear_1_6)"
+                              stroke-width="2"
+                            />
+                            <circle
+                              cx="127.5"
+                              cy="127.5"
+                              r="126.5"
+                              stroke="url(#paint1_linear_1_6)"
+                              stroke-width="2"
+                            />
+                            <circle
+                              cx="127.5"
+                              cy="127.5"
+                              r="107.5"
+                              stroke="url(#paint2_linear_1_6)"
+                              stroke-width="40"
+                            />
+                            <circle
+                              class="data-check__circle"
+                              cx="127.5"
+                              cy="127.5"
+                              r="107.5"
+                              transform="rotate(-90 127.5 127.5)"
+                              stroke="url(#paint3_linear_1_6)"
+                              stroke-width="30"
+                              stroke-linecap="round"
+                              stroke-dasharray="355, 674"
+                            />
+                            <g filter="url(#filter0_i_1_6)">
+                              <circle
+                                cx="127.5"
+                                cy="127.5"
+                                r="87.5"
+                                fill="url(#paint4_linear_1_6)"
+                              />
+                            </g>
+                            <defs>
+                              <filter
+                                id="filter0_i_1_6"
+                                x="40"
+                                y="40"
+                                width="180"
+                                height="182.1"
+                                filterUnits="userSpaceOnUse"
+                                color-interpolation-filters="sRGB"
+                              >
+                                <feFlood
+                                  flood-opacity="0"
+                                  result="BackgroundImageFix"
+                                />
+                                <feBlend
+                                  mode="normal"
+                                  in="SourceGraphic"
+                                  in2="BackgroundImageFix"
+                                  result="shape"
+                                />
+                                <feColorMatrix
+                                  in="SourceAlpha"
+                                  type="matrix"
+                                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                  result="hardAlpha"
+                                />
+                                <feMorphology
+                                  radius="3"
+                                  operator="dilate"
+                                  in="SourceAlpha"
+                                  result="effect1_innerShadow_1_6"
+                                />
+                                <feOffset dx="5" dy="11" />
+                                <feGaussianBlur stdDeviation="5.05" />
+                                <feComposite
+                                  in2="hardAlpha"
+                                  operator="arithmetic"
+                                  k2="-1"
+                                  k3="1"
+                                />
+                                <feColorMatrix
+                                  type="matrix"
+                                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
+                                />
+                                <feBlend
+                                  mode="normal"
+                                  in2="shape"
+                                  result="effect1_innerShadow_1_6"
+                                />
+                              </filter>
+                              <linearGradient
+                                id="paint0_linear_1_6"
+                                x1="219"
+                                y1="242"
+                                x2="146"
+                                y2="141.5"
+                                gradientUnits="userSpaceOnUse"
+                              >
+                                <stop stop-color="white" />
+                                <stop
+                                  offset="1"
+                                  stop-color="#D8D8D8"
+                                  stop-opacity="0"
+                                />
+                                <stop
+                                  offset="1"
+                                  stop-color="#D8D8D8"
+                                  stop-opacity="0"
+                                />
+                              </linearGradient>
+                              <linearGradient
+                                id="paint1_linear_1_6"
+                                x1="62"
+                                y1="9.50002"
+                                x2="127"
+                                y2="127"
+                                gradientUnits="userSpaceOnUse"
+                              >
+                                <stop stop-color="#D8D8D8" />
+                                <stop
+                                  offset="1"
+                                  stop-color="#D8D8D8"
+                                  stop-opacity="0"
+                                />
+                                <stop
+                                  offset="1"
+                                  stop-color="#D8D8D8"
+                                  stop-opacity="0"
+                                />
+                              </linearGradient>
+                              <linearGradient
+                                id="paint2_linear_1_6"
+                                x1="40"
+                                y1="-36"
+                                x2="151.5"
+                                y2="177"
+                                gradientUnits="userSpaceOnUse"
+                              >
+                                <stop
+                                  stop-color="#D8D8D8"
+                                  stop-opacity="0.13"
+                                />
+                                <stop offset="1" stop-opacity="0" />
+                              </linearGradient>
+                              <linearGradient
+                                id="paint3_linear_1_6"
+                                x1="147"
+                                y1="9.99999"
+                                x2="-167"
+                                y2="417.5"
+                                gradientUnits="userSpaceOnUse"
+                              >
+                                <stop offset="0.055" stop-color="#970C98" />
+                                <stop offset="1" />
+                              </linearGradient>
+                              <linearGradient
+                                id="paint4_linear_1_6"
+                                x1="67.5"
+                                y1="50"
+                                x2="180"
+                                y2="192.5"
+                                gradientUnits="userSpaceOnUse"
+                              >
+                                <stop stop-color="#F2E3F3" />
+                                <stop offset="1" stop-color="white" />
+                              </linearGradient>
+                            </defs>
+                          </svg>
+                          <span class="scoring__current-point"
+                            >655<br /><span>баллов</span></span
                           >
                         </div>
-                        <div
-                          class="profile__grop-2-cell profile__current inputs"
-                        >
-                          <span class="profile__current-label">Email</span>
-                          <span class="profile__current-value"
-                            >example@gmail.com</span
+                        <div class="scoring__body-info">
+                          <span class="scoring__label"
+                            >Сайт рыбатекст поможет дизайнеру, верстальщику,
+                            вебмастеру сгенерировать несколько абзацев.</span
                           >
-                        </div>
-                        <div class="profile__current inputs">
-                          <span class="profile__current-label">Город</span>
-                          <span class="profile__current-value"
-                            >Санкт-Петербург</span
-                          >
-                        </div>
-                        <div class="profile__current inputs">
-                          <span class="profile__current-label"
-                            >Дата рождения</span
-                          >
-                          <span class="profile__current-value">25/08/1990</span>
-                        </div>
-                        <div class="profile__current inputs">
-                          <span class="profile__current-label">Пол</span>
-                          <span class="profile__current-value">Женский</span>
-                        </div>
-                        <div class="profile__group-footer">
-                          <button
-                            class="profile__button button-secondary"
-                            type="button"
-                            data-toggle-btn
-                          >
-                            <span class="button-secondary__content"
-                              >Редактировать</span
-                            >
-                          </button>
+                          <ul class="scoring__features">
+                            <li class="scoring__feature">
+                              <svg>
+                                <use
+                                  href="./images/sprite.svg#check"
+                                  xlink:href="./images/sprite.svg#check"
+                                ></use>
+                              </svg>
+                              <span>Кредит за 10 минут</span>
+                            </li>
+                            <li class="scoring__feature">
+                              <svg>
+                                <use
+                                  href="./images/sprite.svg#check"
+                                  xlink:href="./images/sprite.svg#check"
+                                ></use>
+                              </svg>
+                              <span>Еженедельные выплаты</span>
+                            </li>
+                            <li class="scoring__feature">
+                              <svg>
+                                <use
+                                  href="./images/sprite.svg#check"
+                                  xlink:href="./images/sprite.svg#check"
+                                ></use>
+                              </svg>
+                              <span>Моментальные кредиты</span>
+                            </li>
+                            <li class="scoring__feature">
+                              <svg>
+                                <use
+                                  href="./images/sprite.svg#check"
+                                  xlink:href="./images/sprite.svg#check"
+                                ></use>
+                              </svg>
+                              <span>Гибкие условия</span>
+                            </li>
+                            <li class="scoring__feature">
+                              <svg>
+                                <use
+                                  href="./images/sprite.svg#check"
+                                  xlink:href="./images/sprite.svg#check"
+                                ></use>
+                              </svg>
+                              <span>Возможность переоценки скоринга</span>
+                            </li>
+                          </ul>
                         </div>
                       </div>
-                      <form
-                        class="profile__group-edit"
-                        data-toggle-edit
-                        style="display: none"
-                      >
-                        <div class="profile__input inputs input">
-                          <div class="input__wrapper">
-                            <span class="input__label"
-                              >Фамилия <span>*</span></span
-                            >
-                            <div class="input__group">
-                              <input class="input__target" type="text" />
-                            </div>
-                          </div>
-                          <span class="inputs__text-error"
-                            >Неверно заполненное поле</span
+                      <h3 class="scoring__title profile-title">
+                        Таблица градаций
+                      </h3>
+                      <div class="scoring__gradations">
+                        <div class="scoring__gradation">
+                          <strong class="scoring__gradation-value"
+                            >0 - 400</strong
                           >
+                          <span class="scoring__label">Недостаточный балл</span>
+                          <p class="scoring__gradation-description">
+                            По своей сути рыбатекст является альтернытивой
+                            традиционному Lorem ipsum, который вызывает.
+                          </p>
                         </div>
-                        <div class="profile__input inputs input">
-                          <div class="input__wrapper">
-                            <span class="input__label">Имя <span>*</span></span>
-                            <div class="input__group">
-                              <input class="input__target" type="text" />
-                            </div>
-                          </div>
-                          <span class="inputs__text-error"
-                            >Неверно заполненное поле</span
+                        <div class="scoring__gradation">
+                          <strong class="scoring__gradation-value"
+                            >400 - 600</strong
                           >
+                          <span class="scoring__label">Достаточный балл</span>
+                          <p class="scoring__gradation-description">
+                            По своей сути рыбатекст является альтернытивой
+                            традиционному Lorem ipsum, который вызывает.
+                          </p>
                         </div>
-                        <div class="profile__input inputs input">
-                          <div class="input__wrapper">
-                            <span class="input__label">Отчество</span>
-                            <div class="input__group">
-                              <input class="input__target" type="text" />
-                            </div>
-                          </div>
-                          <span class="inputs__text-error"
-                            >Неверно заполненное поле</span
+                        <div class="scoring__gradation">
+                          <strong class="scoring__gradation-value"
+                            >600 - 800</strong
                           >
+                          <span class="scoring__label">Хороший балл</span>
+                          <p class="scoring__gradation-description">
+                            По своей сути рыбатекст является альтернытивой
+                            традиционному Lorem ipsum, который вызывает.
+                          </p>
                         </div>
-                        <div class="profile__input inputs input">
-                          <div class="input__wrapper">
-                            <span class="input__label"
-                              >Телефон <span>*</span></span
-                            >
-                            <div class="input__group">
-                              <input class="input__target" type="text" />
-                            </div>
-                          </div>
-                          <span class="inputs__text-error"
-                            >Неверно заполненное поле</span
+                        <div class="scoring__gradation">
+                          <strong class="scoring__gradation-value"
+                            >800 - 1000</strong
                           >
+                          <span class="scoring__label">Высокий балл</span>
+                          <p class="scoring__gradation-description">
+                            По своей сути рыбатекст является альтернытивой
+                            традиционному Lorem ipsum, который вызывает.
+                          </p>
                         </div>
-                        <div
-                          class="profile__grop-2-cell profile__input inputs input"
-                        >
-                          <div class="input__wrapper">
-                            <span class="input__label"
-                              >Email <span>*</span></span
-                            >
-                            <div class="input__group">
-                              <input class="input__target" type="text" />
-                            </div>
-                          </div>
-                          <span class="inputs__text-error"
-                            >Неверно заполненное поле</span
-                          >
-                        </div>
-                        <div class="profile__select inputs select">
-                          <div class="select__wrapper">
-                            <span class="select__label"
-                              >Город <span>*</span></span
-                            >
-                            <div class="select__group">
-                              <select data-select>
-                                <option value="Санкт-Петербург">
-                                  Санкт-Петербург
-                                </option>
-                                <option value="Москва">Москва</option>
-                                <option value="Екатеренбург">
-                                  Екатеренбург
-                                </option>
-                              </select>
-                              <div class="select__drop">
-                                <img
-                                  src="./images/inputs/drop.svg"
-                                  alt="drop"
-                                />
-                              </div>
-                            </div>
-                          </div>
-                          <span class="inputs__text-error"
-                            >Неверно заполненное поле</span
-                          >
-                        </div>
-                        <div class="profile__input inputs input">
-                          <div class="input__wrapper">
-                            <span class="input__label"
-                              >Дата рождения <span>*</span></span
-                            >
-                            <div class="input__group">
-                              <div class="input__icon">
-                                <img
-                                  src="./images/inputs/calendar.svg"
-                                  alt="calendar"
-                                />
-                              </div>
-                              <input class="input__target" type="text" />
-                            </div>
-                          </div>
-                          <span class="inputs__text-error"
-                            >Неверно заполненное поле</span
-                          >
-                        </div>
-                        <div class="profile__radio inputs radio">
-                          <div class="radio__wrapper">
-                            <span class="radio__label">Пол <span>*</span></span>
-                            <div class="radio__body">
-                              <label class="radio__group"
-                                ><input
-                                  checked="checked"
-                                  class="radio__input"
-                                  type="radio"
-                                  name="sex"
-                                  value="male"
-                                />
-                                <span class="radio__text"
-                                  ><span>Мужской</span></span
-                                ></label
-                              >
-                              <label class="radio__group"
-                                ><input
-                                  class="radio__input"
-                                  type="radio"
-                                  name="sex"
-                                  value="female"
-                                />
-                                <span class="radio__text"
-                                  ><span>Женский</span></span
-                                ></label
-                              >
-                            </div>
-                          </div>
-                          <span class="inputs__text-error"
-                            >Неверно заполненное поле</span
-                          >
-                        </div>
-                        <div class="profile__group-footer">
-                          <button class="profile__button button" type="submit">
-                            <span class="button__content">Сохранить</span>
-                          </button>
-                          <button
-                            class="profile__button button-secondary"
-                            type="button"
-                            data-toggle-btn
-                          >
-                            <span class="button-secondary__content"
-                              >Отмена</span
-                            >
-                          </button>
-                        </div>
-                      </form>
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    class="profile__tab-body"
-                    data-tab-body="passport"
+                  </section>
+                  <section
+                    class="profile__settings profile-settings"
+                    data-tab-body="profile-settings"
                     style="display: none"
                   >
-                    <div class="profile__group" data-toggle-card>
-                      <div
-                        class="profile__group-current active"
-                        data-toggle-current
-                      >
-                        <div class="profile__current inputs">
-                          <span class="profile__current-label">Серия</span>
-                          <span class="profile__current-value">00 - 14</span>
-                        </div>
-                        <div class="profile__current inputs">
-                          <span class="profile__current-label">Номер</span>
-                          <span class="profile__current-value">00 00 00</span>
-                        </div>
-                        <div class="profile__current inputs">
-                          <span class="profile__current-label"
-                            >Код подразделения</span
+                    <div class="profile-settings__wrapper">
+                      <h3 class="profile-settings__title profile-title">
+                        Профиль
+                      </h3>
+                      <div class="profile-settings__groups">
+                        <div class="profile-settings__group" data-toggle-card>
+                          <span class="profile-settings__label"
+                            >Личные данные</span
                           >
-                          <span class="profile__current-value">292 - 000</span>
-                        </div>
-                        <div class="profile__group-footer">
-                          <button
-                            class="profile__button button-secondary"
-                            type="button"
-                            data-toggle-btn
+                          <div
+                            class="profile-settings__group-current active"
+                            data-toggle-current
                           >
-                            <span class="button-secondary__content"
-                              >Редактировать</span
+                            <div class="profile-settings__current inputs">
+                              <span class="profile-settings__current-label"
+                                >Фамилия</span
+                              >
+                              <span class="profile-settings__current-value"
+                                >Вертишина</span
+                              >
+                            </div>
+                            <div class="profile-settings__current inputs">
+                              <span class="profile-settings__current-label"
+                                >Имя</span
+                              >
+                              <span class="profile-settings__current-value"
+                                >Анастасия</span
+                              >
+                            </div>
+                            <div class="profile-settings__current inputs">
+                              <span class="profile-settings__current-label"
+                                >Отчество</span
+                              >
+                              <span class="profile-settings__current-value"
+                                >-</span
+                              >
+                            </div>
+                            <div class="profile-settings__current inputs">
+                              <span class="profile-settings__current-label"
+                                >Телефон <span>*</span></span
+                              >
+                              <span class="profile-settings__current-value"
+                                >+8 (050) 444-13-24</span
+                              >
+                            </div>
+                            <div
+                              class="profile-settings__grop-2-cell profile-settings__current inputs"
                             >
-                          </button>
+                              <span class="profile-settings__current-label"
+                                >Email</span
+                              >
+                              <span class="profile-settings__current-value"
+                                >example@gmail.com</span
+                              >
+                            </div>
+                            <div class="profile-settings__current inputs">
+                              <span class="profile-settings__current-label"
+                                >Город</span
+                              >
+                              <span class="profile-settings__current-value"
+                                >Санкт-Петербург</span
+                              >
+                            </div>
+                            <div class="profile-settings__current inputs">
+                              <span class="profile-settings__current-label"
+                                >Дата рождения</span
+                              >
+                              <span class="profile-settings__current-value"
+                                >25/08/1990</span
+                              >
+                            </div>
+                            <div class="profile-settings__current inputs">
+                              <span class="profile-settings__current-label"
+                                >Пол</span
+                              >
+                              <span class="profile-settings__current-value"
+                                >Женский</span
+                              >
+                            </div>
+                            <div class="profile-settings__group-footer">
+                              <button
+                                class="profile-settings__button button-secondary"
+                                type="button"
+                                data-toggle-btn
+                              >
+                                <span class="button-secondary__content"
+                                  >Редактировать</span
+                                >
+                              </button>
+                            </div>
+                          </div>
+                          <form
+                            class="profile-settings__group-edit"
+                            data-toggle-edit
+                            style="display: none"
+                          >
+                            <div class="profile-settings__input inputs input">
+                              <div class="input__wrapper">
+                                <span class="input__label"
+                                  >Фамилия <span>*</span></span
+                                >
+                                <div class="input__group">
+                                  <input class="input__target" type="text" />
+                                </div>
+                              </div>
+                              <span class="inputs__text-error"
+                                >Неверно заполненное поле</span
+                              >
+                            </div>
+                            <div class="profile-settings__input inputs input">
+                              <div class="input__wrapper">
+                                <span class="input__label"
+                                  >Имя <span>*</span></span
+                                >
+                                <div class="input__group">
+                                  <input class="input__target" type="text" />
+                                </div>
+                              </div>
+                              <span class="inputs__text-error"
+                                >Неверно заполненное поле</span
+                              >
+                            </div>
+                            <div class="profile-settings__input inputs input">
+                              <div class="input__wrapper">
+                                <span class="input__label">Отчество</span>
+                                <div class="input__group">
+                                  <input class="input__target" type="text" />
+                                </div>
+                              </div>
+                              <span class="inputs__text-error"
+                                >Неверно заполненное поле</span
+                              >
+                            </div>
+                            <div class="profile-settings__input inputs input">
+                              <div class="input__wrapper">
+                                <span class="input__label"
+                                  >Телефон <span>*</span></span
+                                >
+                                <div class="input__group">
+                                  <input class="input__target" type="text" />
+                                </div>
+                              </div>
+                              <span class="inputs__text-error"
+                                >Неверно заполненное поле</span
+                              >
+                            </div>
+                            <div
+                              class="profile-settings__grop-2-cell profile-settings__input inputs input"
+                            >
+                              <div class="input__wrapper">
+                                <span class="input__label"
+                                  >Email <span>*</span></span
+                                >
+                                <div class="input__group">
+                                  <input class="input__target" type="text" />
+                                </div>
+                              </div>
+                              <span class="inputs__text-error"
+                                >Неверно заполненное поле</span
+                              >
+                            </div>
+                            <div class="profile-settings__select inputs select">
+                              <div class="select__wrapper">
+                                <span class="select__label"
+                                  >Город <span>*</span></span
+                                >
+                                <div class="select__group">
+                                  <select data-select>
+                                    <option value="Санкт-Петербург">
+                                      Санкт-Петербург
+                                    </option>
+                                    <option value="Москва">Москва</option>
+                                    <option value="Екатеренбург">
+                                      Екатеренбург
+                                    </option>
+                                  </select>
+                                  <div class="select__drop">
+                                    <img
+                                      src="./images/inputs/drop.svg"
+                                      alt="drop"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <span class="inputs__text-error"
+                                >Неверно заполненное поле</span
+                              >
+                            </div>
+                            <div class="profile-settings__input inputs input">
+                              <div class="input__wrapper">
+                                <span class="input__label"
+                                  >Дата рождения <span>*</span></span
+                                >
+                                <div class="input__group">
+                                  <div class="input__icon">
+                                    <img
+                                      src="./images/inputs/calendar.svg"
+                                      alt="calendar"
+                                    />
+                                  </div>
+                                  <input class="input__target" type="text" />
+                                </div>
+                              </div>
+                              <span class="inputs__text-error"
+                                >Неверно заполненное поле</span
+                              >
+                            </div>
+                            <div class="profile-settings__radio inputs radio">
+                              <div class="radio__wrapper">
+                                <span class="radio__label"
+                                  >Пол <span>*</span></span
+                                >
+                                <div class="radio__body">
+                                  <label class="radio__group"
+                                    ><input
+                                      checked="checked"
+                                      class="radio__input"
+                                      type="radio"
+                                      name="sex"
+                                      value="male"
+                                    />
+                                    <span class="radio__text"
+                                      ><span>Мужской</span></span
+                                    ></label
+                                  >
+                                  <label class="radio__group"
+                                    ><input
+                                      class="radio__input"
+                                      type="radio"
+                                      name="sex"
+                                      value="female"
+                                    />
+                                    <span class="radio__text"
+                                      ><span>Женский</span></span
+                                    ></label
+                                  >
+                                </div>
+                              </div>
+                              <span class="inputs__text-error"
+                                >Неверно заполненное поле</span
+                              >
+                            </div>
+                            <div class="profile-settings__group-footer">
+                              <button
+                                class="profile-settings__button button"
+                                type="submit"
+                              >
+                                <span class="button__content">Сохранить</span>
+                              </button>
+                              <button
+                                class="profile-settings__button button-secondary"
+                                type="button"
+                                data-toggle-btn
+                              >
+                                <span class="button-secondary__content"
+                                  >Отмена</span
+                                >
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="profile-settings__group" data-toggle-card>
+                          <span class="profile-settings__label"
+                            >Паспортные данные</span
+                          >
+                          <div
+                            class="profile-settings__group-current active"
+                            data-toggle-current
+                          >
+                            <div class="profile-settings__current inputs">
+                              <span class="profile-settings__current-label"
+                                >Серия</span
+                              >
+                              <span class="profile-settings__current-value"
+                                >00 - 14</span
+                              >
+                            </div>
+                            <div class="profile-settings__current inputs">
+                              <span class="profile-settings__current-label"
+                                >Номер</span
+                              >
+                              <span class="profile-settings__current-value"
+                                >00 00 00</span
+                              >
+                            </div>
+                            <div class="profile-settings__current inputs">
+                              <span class="profile-settings__current-label"
+                                >Место рождения</span
+                              >
+                              <span class="profile-settings__current-value"
+                                >Санкт-Петербург</span
+                              >
+                            </div>
+                            <div class="profile-settings__current inputs">
+                              <span class="profile-settings__current-label"
+                                >Дата выдачи паспорта</span
+                              >
+                              <span class="profile-settings__current-value"
+                                >25/10/1997</span
+                              >
+                            </div>
+                            <div
+                              class="profile-settings__grop-2-cell profile-settings__current inputs"
+                            >
+                              <span class="profile-settings__current-label"
+                                >Кем выдан</span
+                              >
+                              <span class="profile-settings__current-value"
+                                >25.10.199ГУ МВД России по г.
+                                Санкт-Петербург7</span
+                              >
+                            </div>
+                            <div class="profile-settings__current inputs">
+                              <span class="profile-settings__current-label"
+                                >Код подразделения</span
+                              >
+                              <span class="profile-settings__current-value"
+                                >770-001</span
+                              >
+                            </div>
+                            <div class="profile-settings__current inputs">
+                              <span class="profile-settings__current-label"
+                                >Ваш пол</span
+                              >
+                              <span class="profile-settings__current-value"
+                                >Мужской</span
+                              >
+                            </div>
+                            <div class="profile-settings__group-footer">
+                              <button
+                                class="profile-settings__button button-secondary"
+                                type="button"
+                                data-toggle-btn
+                              >
+                                <span class="button-secondary__content"
+                                  >Редактировать</span
+                                >
+                              </button>
+                            </div>
+                          </div>
+                          <form
+                            class="profile-settings__group-edit"
+                            data-toggle-edit
+                            style="display: none"
+                          >
+                            <div class="profile-settings__input inputs input">
+                              <div class="input__wrapper">
+                                <span class="input__label"
+                                  >Серия <span>*</span></span
+                                >
+                                <div class="input__group">
+                                  <input class="input__target" type="text" />
+                                </div>
+                              </div>
+                              <span class="inputs__text-error"
+                                >Неверно заполненное поле</span
+                              >
+                            </div>
+                            <div class="profile-settings__input inputs input">
+                              <div class="input__wrapper">
+                                <span class="input__label"
+                                  >Номер паспорта <span>*</span></span
+                                >
+                                <div class="input__group">
+                                  <input class="input__target" type="text" />
+                                </div>
+                              </div>
+                              <span class="inputs__text-error"
+                                >Неверно заполненное поле</span
+                              >
+                            </div>
+                            <div class="profile-settings__select inputs select">
+                              <div class="select__wrapper">
+                                <span class="select__label"
+                                  >Место рождения <span>*</span></span
+                                >
+                                <div class="select__group">
+                                  <select data-select>
+                                    <option value="Санкт-Петербург">
+                                      Санкт-Петербург
+                                    </option>
+                                    <option value="Москва">Москва</option>
+                                    <option value="Екатеренбург">
+                                      Екатеренбург
+                                    </option>
+                                  </select>
+                                  <div class="select__drop">
+                                    <img
+                                      src="./images/inputs/drop.svg"
+                                      alt="drop"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <span class="inputs__text-error"
+                                >Неверно заполненное поле</span
+                              >
+                            </div>
+                            <div class="profile-settings__input inputs input">
+                              <div class="input__wrapper">
+                                <span class="input__label"
+                                  >Дата выдачи паспорта <span>*</span></span
+                                >
+                                <div class="input__group">
+                                  <div class="input__icon">
+                                    <img
+                                      src="./images/inputs/calendar.svg"
+                                      alt="calendar"
+                                    />
+                                  </div>
+                                  <input class="input__target" type="text" />
+                                </div>
+                              </div>
+                              <span class="inputs__text-error"
+                                >Неверно заполненное поле</span
+                              >
+                            </div>
+                            <div
+                              class="profile-settings__grop-2-cell profile-settings__input inputs input"
+                            >
+                              <div class="input__wrapper">
+                                <span class="input__label">Кем выдан</span>
+                                <div class="input__group">
+                                  <input
+                                    class="input__target"
+                                    type="text"
+                                    value="25.10.199ГУ МВД России по г. Санкт-Петербург7"
+                                  />
+                                </div>
+                              </div>
+                              <span class="inputs__text-error"
+                                >Неверно заполненное поле</span
+                              >
+                            </div>
+                            <div class="profile-settings__input inputs input">
+                              <div class="input__wrapper">
+                                <span class="input__label"
+                                  >Код подразделения <span>*</span></span
+                                >
+                                <div class="input__group">
+                                  <input class="input__target" type="text" />
+                                </div>
+                              </div>
+                              <span class="inputs__text-error"
+                                >Неверно заполненное поле</span
+                              >
+                            </div>
+                            <div class="profile-settings__radio inputs radio">
+                              <div class="radio__wrapper">
+                                <span class="radio__label"
+                                  >Пол <span>*</span></span
+                                >
+                                <div class="radio__body">
+                                  <label class="radio__group"
+                                    ><input
+                                      checked="checked"
+                                      class="radio__input"
+                                      type="radio"
+                                      name="sex"
+                                      value="male"
+                                    />
+                                    <span class="radio__text"
+                                      ><span>Мужской</span></span
+                                    ></label
+                                  >
+                                  <label class="radio__group"
+                                    ><input
+                                      class="radio__input"
+                                      type="radio"
+                                      name="sex"
+                                      value="female"
+                                    />
+                                    <span class="radio__text"
+                                      ><span>Женский</span></span
+                                    ></label
+                                  >
+                                </div>
+                              </div>
+                              <span class="inputs__text-error"
+                                >Неверно заполненное поле</span
+                              >
+                            </div>
+                            <div class="profile-settings__group-footer">
+                              <button
+                                class="profile-settings__button button"
+                                type="submit"
+                              >
+                                <span class="button__content">Сохранить</span>
+                              </button>
+                              <button
+                                class="profile-settings__button button-secondary"
+                                type="button"
+                                data-toggle-btn
+                              >
+                                <span class="button-secondary__content"
+                                  >Отмена</span
+                                >
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="profile-settings__group" data-toggle-card>
+                          <span class="profile-settings__label"
+                            >Адрес ргистрации</span
+                          >
+                          <div
+                            class="profile-settings__group-current active"
+                            data-toggle-current
+                          >
+                            <div class="profile-settings__current inputs">
+                              <span class="profile-settings__current-label"
+                                >Область</span
+                              >
+                              <span class="profile-settings__current-value"
+                                >Ленинградская</span
+                              >
+                            </div>
+                            <div class="profile-settings__current inputs">
+                              <span class="profile-settings__current-label"
+                                >Населенный пункт</span
+                              >
+                              <span class="profile-settings__current-value"
+                                >Санкт-Петербург</span
+                              >
+                            </div>
+                            <div class="profile-settings__current inputs">
+                              <span class="profile-settings__current-label"
+                                >Улица</span
+                              >
+                              <span class="profile-settings__current-value"
+                                >Рубинштейна</span
+                              >
+                            </div>
+                            <div class="profile-settings__current inputs">
+                              <span class="profile-settings__current-label"
+                                >Дом, квартира</span
+                              >
+                              <span class="profile-settings__current-value"
+                                >14А, 57</span
+                              >
+                            </div>
+                            <div class="profile-settings__group-footer">
+                              <button
+                                class="profile-settings__button button-secondary"
+                                type="button"
+                                data-toggle-btn
+                              >
+                                <span class="button-secondary__content"
+                                  >Редактировать</span
+                                >
+                              </button>
+                            </div>
+                          </div>
+                          <form
+                            class="profile-settings__group-edit"
+                            data-toggle-edit
+                            style="display: none"
+                          >
+                            <div class="profile-settings__input inputs input">
+                              <div class="input__wrapper">
+                                <span class="input__label"
+                                  >Область <span>*</span></span
+                                >
+                                <div class="input__group">
+                                  <input class="input__target" type="text" />
+                                </div>
+                              </div>
+                              <span class="inputs__text-error"
+                                >Неверно заполненное поле</span
+                              >
+                            </div>
+                            <div class="profile-settings__select inputs select">
+                              <div class="select__wrapper">
+                                <span class="select__label"
+                                  >Населенный пункт <span>*</span></span
+                                >
+                                <div class="select__group">
+                                  <select data-select>
+                                    <option value="Санкт-Петербург">
+                                      Санкт-Петербург
+                                    </option>
+                                    <option value="Москва">Москва</option>
+                                    <option value="Екатеренбург">
+                                      Екатеренбург
+                                    </option>
+                                  </select>
+                                  <div class="select__drop">
+                                    <img
+                                      src="./images/inputs/drop.svg"
+                                      alt="drop"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <span class="inputs__text-error"
+                                >Неверно заполненное поле</span
+                              >
+                            </div>
+                            <div class="profile-settings__input inputs input">
+                              <div class="input__wrapper">
+                                <span class="input__label"
+                                  >Улица <span>*</span></span
+                                >
+                                <div class="input__group">
+                                  <input class="input__target" type="text" />
+                                </div>
+                              </div>
+                              <span class="inputs__text-error"
+                                >Неверно заполненное поле</span
+                              >
+                            </div>
+                            <div class="profile-settings__input inputs input">
+                              <div class="input__wrapper">
+                                <span class="input__label"
+                                  >Дом, квартира <span>*</span></span
+                                >
+                                <div class="input__group">
+                                  <input class="input__target" type="text" />
+                                </div>
+                              </div>
+                              <span class="inputs__text-error"
+                                >Неверно заполненное поле</span
+                              >
+                            </div>
+                            <div class="profile-settings__group-footer">
+                              <button
+                                class="profile-settings__button button"
+                                type="submit"
+                              >
+                                <span class="button__content">Сохранить</span>
+                              </button>
+                              <button
+                                class="profile-settings__button button-secondary"
+                                type="button"
+                                data-toggle-btn
+                              >
+                                <span class="button-secondary__content"
+                                  >Отмена</span
+                                >
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="profile-settings__group">
+                          <span class="profile-settings__label"
+                            >Смена пароля</span
+                          >
+                          <form class="profile-settings__group-edit active">
+                            <div class="profile-settings__input inputs input">
+                              <div class="input__wrapper">
+                                <span class="input__label"
+                                  >Текущий пароль <span>*</span></span
+                                >
+                                <div class="input__group">
+                                  <input class="input__target" type="text" />
+                                </div>
+                              </div>
+                              <span class="inputs__text-error"
+                                >Неверно заполненное поле</span
+                              >
+                            </div>
+                            <div class="profile-settings__input inputs input">
+                              <div class="input__wrapper">
+                                <span class="input__label"
+                                  >Новый пароль <span>*</span></span
+                                >
+                                <div class="input__group">
+                                  <input class="input__target" type="text" />
+                                </div>
+                              </div>
+                              <span class="inputs__text-error"
+                                >Неверно заполненное поле</span
+                              >
+                            </div>
+                            <div class="profile-settings__input inputs input">
+                              <div class="input__wrapper">
+                                <span class="input__label"
+                                  >Подтвердите пароль <span>*</span></span
+                                >
+                                <div class="input__group">
+                                  <input class="input__target" type="text" />
+                                </div>
+                              </div>
+                              <span class="inputs__text-error"
+                                >Неверно заполненное поле</span
+                              >
+                            </div>
+                            <div class="profile-settings__group-footer">
+                              <button
+                                class="profile-settings__button button"
+                                type="submit"
+                              >
+                                <span class="button__content"
+                                  >Сменить пароль</span
+                                >
+                              </button>
+                            </div>
+                          </form>
                         </div>
                       </div>
-                      <form
-                        class="profile__group-edit"
-                        data-toggle-edit
-                        style="display: none"
-                      >
-                        <div class="profile__input inputs input">
-                          <div class="input__wrapper">
-                            <span class="input__label"
-                              >Серия <span>*</span></span
+                      <div class="profile-settings__socials">
+                        <span class="profile-settings__label"
+                          >Социальные сети</span
+                        >
+                        <div class="profile-settings__socials-wrapper">
+                          <div class="profile-settings__social">
+                            <div class="profile-settings__social-icon">
+                              <img
+                                src="./images/profile-settings/twitter.svg"
+                                alt="Twitter"
+                              />
+                            </div>
+                            <span class="profile-settings__social-name"
+                              >Twitter</span
                             >
-                            <div class="input__group">
-                              <input class="input__target" type="text" />
+                            <button
+                              class="profile-settings__social-remove"
+                              type="button"
+                            >
+                              <svg>
+                                <use
+                                  href="./images/sprite.svg#trash"
+                                  xlink:href="./images/sprite.svg#trash"
+                                ></use>
+                              </svg>
+                            </button>
+                          </div>
+                          <div class="profile-settings__social">
+                            <div class="profile-settings__social-icon">
+                              <img
+                                src="./images/profile-settings/vk.svg"
+                                alt="Vkontakte"
+                              />
+                            </div>
+                            <span class="profile-settings__social-name"
+                              >Vkontakte</span
+                            >
+                            <button
+                              class="profile-settings__social-remove"
+                              type="button"
+                            >
+                              <svg>
+                                <use
+                                  href="./images/sprite.svg#trash"
+                                  xlink:href="./images/sprite.svg#trash"
+                                ></use>
+                              </svg>
+                            </button>
+                          </div>
+                          <div class="profile-settings__social">
+                            <div class="profile-settings__social-icon">
+                              <img
+                                src="./images/profile-settings/facebook.svg"
+                                alt="Facebook"
+                              />
+                            </div>
+                            <span class="profile-settings__social-name"
+                              >Facebook</span
+                            >
+                            <button
+                              class="profile-settings__social-remove"
+                              type="button"
+                            >
+                              <svg>
+                                <use
+                                  href="./images/sprite.svg#trash"
+                                  xlink:href="./images/sprite.svg#trash"
+                                ></use>
+                              </svg>
+                            </button>
+                          </div>
+                          <div class="profile-settings__social">
+                            <div class="profile-settings__social-icon">
+                              <img
+                                src="./images/profile-settings/linkedin.svg"
+                                alt="Linkedin"
+                              />
+                            </div>
+                            <span class="profile-settings__social-name"
+                              >Linkedin</span
+                            >
+                            <button
+                              class="profile-settings__social-remove"
+                              type="button"
+                            >
+                              <svg>
+                                <use
+                                  href="./images/sprite.svg#trash"
+                                  xlink:href="./images/sprite.svg#trash"
+                                ></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <section
+                    class="profile__events events"
+                    data-tab-body="events"
+                    style="display: none"
+                  >
+                    <div class="events__wrapper">
+                      <h3 class="events__title profile-title">Лента событий</h3>
+                      <div class="events__items">
+                        <div class="events__item new">
+                          <div class="events__head">
+                            <span class="events__label"
+                              >Оформление подписки на месяц за $25</span
+                            >
+                          </div>
+                          <span class="events__date">25 июня 2020 21:40</span>
+                        </div>
+                        <div class="events__item new">
+                          <div class="events__head">
+                            <span class="events__label"
+                              >Запрос на переоценку вашего скоринга с 400 баллов
+                              до 600 баллов</span
+                            >
+                          </div>
+                          <span class="events__date">25 июня 2020 21:40</span>
+                        </div>
+                        <div class="events__item">
+                          <div class="events__head">
+                            <span class="events__label"
+                              >Списание $25 с карты ****2144</span
+                            >
+                          </div>
+                          <span class="events__date">25 июня 2020 21:40</span>
+                        </div>
+                        <div class="events__item">
+                          <div class="events__head">
+                            <span class="events__label"
+                              >Оформление подписки на месяц за $25</span
+                            >
+                          </div>
+                          <span class="events__date">25 июня 2020 21:40</span>
+                        </div>
+                        <div class="events__item">
+                          <div class="events__head">
+                            <span class="events__label"
+                              >Запрос на переоценку вашего скоринга с 400 баллов
+                              до 600 баллов</span
+                            >
+                          </div>
+                          <span class="events__date">25 июня 2020 21:40</span>
+                        </div>
+                      </div>
+                      <button class="events__more button" type="button">
+                        <span class="button__content">Показать ещё</span>
+                      </button>
+                    </div>
+                  </section>
+                  <section
+                    class="profile__subscription subscription"
+                    data-tab-body="subscription"
+                    style="display: none"
+                  >
+                    <div class="subscription__wrapper">
+                      <h3 class="subscription__title profile-title">
+                        Подписка
+                      </h3>
+                      <div class="subscription__body">
+                        <div class="subscription__current">
+                          <strong class="subscription__sum">699 ₽</strong>
+                          <span class="subscription__name">Недельный план</span>
+                          <ul class="subscription__features">
+                            <li class="subscription__feature">
+                              <svg>
+                                <use
+                                  href="./images/sprite.svg#check"
+                                  xlink:href="./images/sprite.svg#check"
+                                ></use>
+                              </svg>
+                              <span>Кредит за 10 минут</span>
+                            </li>
+                            <li class="subscription__feature">
+                              <svg>
+                                <use
+                                  href="./images/sprite.svg#check"
+                                  xlink:href="./images/sprite.svg#check"
+                                ></use>
+                              </svg>
+                              <span>Еженедельные выплаты</span>
+                            </li>
+                            <li class="subscription__feature">
+                              <svg>
+                                <use
+                                  href="./images/sprite.svg#check"
+                                  xlink:href="./images/sprite.svg#check"
+                                ></use>
+                              </svg>
+                              <span>Моментальные кредиты</span>
+                            </li>
+                            <li class="subscription__feature">
+                              <svg>
+                                <use
+                                  href="./images/sprite.svg#check"
+                                  xlink:href="./images/sprite.svg#check"
+                                ></use>
+                              </svg>
+                              <span>Гибкие условия</span>
+                            </li>
+                            <li class="subscription__feature">
+                              <svg>
+                                <use
+                                  href="./images/sprite.svg#check"
+                                  xlink:href="./images/sprite.svg#check"
+                                ></use>
+                              </svg>
+                              <span>Возможность переоценки скоринга</span>
+                            </li>
+                          </ul>
+                          <a class="subscription__cancel button" href="#"
+                            ><span class="button__content">Отменить</span></a
+                          >
+                        </div>
+                        <div class="subscription__info">
+                          <span class="subscription__label"
+                            >Как вернуть деньги?</span
+                          >
+                          <p class="subscription__description">
+                            Сайт рыбатекст поможет дизайнеру, верстальщику,
+                            вебмастеру сгенерировать несколько абзацев более
+                            менее осмысленного текста рыбы на русском языке, а
+                            начинающему оратору отточить навык публичных
+                            выступлений в домашних условиях. При создании
+                            генератора мы использовали небезизвестный
+                            универсальный код речей.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <section
+                    class="profile__newsletter newsletter"
+                    data-tab-body="newsletter"
+                    style="display: none"
+                  >
+                    <div class="newsletter__wrapper">
+                      <h3 class="newsletter__title profile-title">Рассылка</h3>
+                      <div class="newsletter__items">
+                        <div class="newsletter__item">
+                          <div class="newsletter__checkbox checkbox">
+                            <div class="checkbox__wrapper">
+                              <label class="checkbox__gropu"
+                                ><input
+                                  checked="checked"
+                                  class="checkbox__input"
+                                  type="checkbox" />
+                                <div class="checkbox__icon">
+                                  <img
+                                    src="./images/inputs/check.svg"
+                                    alt="check"
+                                  /></div
+                              ></label>
                             </div>
                           </div>
-                          <span class="inputs__text-error"
-                            >Неверно заполненное поле</span
-                          >
+                          <div class="newsletter__label">Email рассылка</div>
+                          <p class="newsletter__description">
+                            По своей сути рыбатекст является альтернытивой
+                            традиционному Lorem ipsum, который вызывает. По
+                            своей сути рыбатекст является альтернытивой
+                            традиционному Lorem ipsum, который вызывает.
+                          </p>
                         </div>
-                        <div class="profile__input inputs input">
-                          <div class="input__wrapper">
-                            <span class="input__label"
-                              >Номер <span>*</span></span
-                            >
-                            <div class="input__group">
-                              <input class="input__target" type="text" />
+                        <div class="newsletter__item">
+                          <div class="newsletter__checkbox checkbox">
+                            <div class="checkbox__wrapper">
+                              <label class="checkbox__gropu"
+                                ><input
+                                  class="checkbox__input"
+                                  type="checkbox" />
+                                <div class="checkbox__icon">
+                                  <img
+                                    src="./images/inputs/check.svg"
+                                    alt="check"
+                                  /></div
+                              ></label>
                             </div>
                           </div>
-                          <span class="inputs__text-error"
-                            >Неверно заполненное поле</span
-                          >
+                          <div class="newsletter__label">SMS рассылка</div>
+                          <p class="newsletter__description">
+                            По своей сути рыбатекст является альтернытивой
+                            традиционному Lorem ipsum, который вызывает. По
+                            своей сути рыбатекст является альтернытивой
+                            традиционному Lorem ipsum, который вызывает.
+                          </p>
                         </div>
-                        <div class="profile__input inputs input">
-                          <div class="input__wrapper">
-                            <span class="input__label">Код подразделения</span>
-                            <div class="input__group">
-                              <input class="input__target" type="text" />
+                        <div class="newsletter__item">
+                          <div class="newsletter__checkbox checkbox">
+                            <div class="checkbox__wrapper">
+                              <label class="checkbox__gropu"
+                                ><input
+                                  class="checkbox__input"
+                                  type="checkbox" />
+                                <div class="checkbox__icon">
+                                  <img
+                                    src="./images/inputs/check.svg"
+                                    alt="check"
+                                  /></div
+                              ></label>
                             </div>
                           </div>
-                          <span class="inputs__text-error"
-                            >Неверно заполненное поле</span
-                          >
+                          <div class="newsletter__label">
+                            Партнерская рассылка
+                          </div>
+                          <p class="newsletter__description">
+                            По своей сути рыбатекст является альтернытивой
+                            традиционному Lorem ipsum, который вызывает. По
+                            своей сути рыбатекст является альтернытивой
+                            традиционному Lorem ipsum, который вызывает.
+                          </p>
                         </div>
-                        <div class="profile__group-footer">
-                          <button class="profile__button button" type="submit">
-                            <span class="button__content">Сохранить</span>
-                          </button>
-                          <button
-                            class="profile__button button-secondary"
-                            type="button"
-                            data-toggle-btn
-                          >
-                            <span class="button-secondary__content"
-                              >Отмена</span
+                      </div>
+                    </div>
+                  </section>
+                  <section
+                    class="profile__documents documents"
+                    data-tab-body="documents"
+                    style="display: none"
+                  >
+                    <div class="documents__wrapper">
+                      <h3 class="documents__title profile-title">Документы</h3>
+                      <div class="documents__items" data-documents-ac data-ac>
+                        <div class="documents__item" data-ac-item>
+                          <div class="documents__head">
+                            <span class="documents__label"
+                              >Описание услуги по займу, общей суммой 2 500
+                              ₽</span
                             >
-                          </button>
+                            <span class="documents__date"
+                              >25 июня 2020 21:40</span
+                            >
+                          </div>
+                          <div class="documents__body">
+                            <strong class="documents__sum">2 500 ₽</strong>
+                            <div class="documents__actions">
+                              <button class="documents__cancel" type="button">
+                                Отменить подписку
+                              </button>
+                              <button
+                                class="documents__offers button"
+                                type="button"
+                              >
+                                <span class="button__content"
+                                  >Персональные предложения</span
+                                >
+                              </button>
+                            </div>
+                          </div>
+                          <div class="documents__ac-button" data-ac-button>
+                            <span
+                              >Отчет по автоматической подачи заявки на
+                              займ</span
+                            >
+                            <svg>
+                              <use
+                                href="./images/sprite.svg#drop"
+                                xlink:href="./images/sprite.svg#drop"
+                              ></use>
+                            </svg>
+                          </div>
+                          <div
+                            class="documents__ac-body"
+                            data-ac-body
+                            style="display: none"
+                          >
+                            <div class="documents__groups">
+                              <div class="documents__group">
+                                <div class="documents__logo">
+                                  <img
+                                    src="./images/documents/logo_01.png"
+                                    alt="logo"
+                                  />
+                                </div>
+                                <div class="documents__info">
+                                  <span class="documents__name">ОТП банк</span>
+                                  <p class="documents__description">
+                                    Раньше весь процесс получения кредита
+                                    занимал 10 дней. Теперь мы можем
+                                    авторизовать ссуду примерно за 30 минут.
+                                  </p>
+                                  <span class="documents__date"
+                                    >25 июня 2020 21:40</span
+                                  >
+                                </div>
+                              </div>
+                              <div class="documents__group">
+                                <div class="documents__logo">
+                                  <img
+                                    src="./images/documents/logo_01.png"
+                                    alt="logo"
+                                  />
+                                </div>
+                                <div class="documents__info">
+                                  <span class="documents__name">ОТП банк</span>
+                                  <p class="documents__description">
+                                    Раньше весь процесс получения кредита
+                                    занимал 10 дней. Теперь мы можем
+                                    авторизовать ссуду примерно за 30 минут.
+                                  </p>
+                                  <span class="documents__date"
+                                    >25 июня 2020 21:40</span
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
+                        <div class="documents__item" data-ac-item>
+                          <div class="documents__head">
+                            <span class="documents__label"
+                              >Описание услуги по займу, общей суммой 2 500
+                              ₽</span
+                            >
+                            <span class="documents__date"
+                              >25 июня 2020 21:40</span
+                            >
+                          </div>
+                          <div class="documents__body">
+                            <strong class="documents__sum">2 500 ₽</strong>
+                            <div class="documents__actions">
+                              <button class="documents__cancel" type="button">
+                                Отменить подписку
+                              </button>
+                              <button
+                                class="documents__offers button"
+                                type="button"
+                              >
+                                <span class="button__content"
+                                  >Персональные предложения</span
+                                >
+                              </button>
+                            </div>
+                          </div>
+                          <div class="documents__ac-button" data-ac-button>
+                            <span
+                              >Отчет по автоматической подачи заявки на
+                              займ</span
+                            >
+                            <svg>
+                              <use
+                                href="./images/sprite.svg#drop"
+                                xlink:href="./images/sprite.svg#drop"
+                              ></use>
+                            </svg>
+                          </div>
+                          <div
+                            class="documents__ac-body"
+                            data-ac-body
+                            style="display: none"
+                          >
+                            <div class="documents__groups">
+                              <div class="documents__group">
+                                <div class="documents__logo">
+                                  <img
+                                    src="./images/documents/logo_01.png"
+                                    alt="logo"
+                                  />
+                                </div>
+                                <div class="documents__info">
+                                  <span class="documents__name">ОТП банк</span>
+                                  <p class="documents__description">
+                                    Раньше весь процесс получения кредита
+                                    занимал 10 дней. Теперь мы можем
+                                    авторизовать ссуду примерно за 30 минут.
+                                  </p>
+                                  <span class="documents__date"
+                                    >25 июня 2020 21:40</span
+                                  >
+                                </div>
+                              </div>
+                              <div class="documents__group">
+                                <div class="documents__logo">
+                                  <img
+                                    src="./images/documents/logo_01.png"
+                                    alt="logo"
+                                  />
+                                </div>
+                                <div class="documents__info">
+                                  <span class="documents__name">ОТП банк</span>
+                                  <p class="documents__description">
+                                    Раньше весь процесс получения кредита
+                                    занимал 10 дней. Теперь мы можем
+                                    авторизовать ссуду примерно за 30 минут.
+                                  </p>
+                                  <span class="documents__date"
+                                    >25 июня 2020 21:40</span
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="documents__item" data-ac-item>
+                          <div class="documents__head">
+                            <span class="documents__label"
+                              >Описание услуги по займу, общей суммой 2 500
+                              ₽</span
+                            >
+                            <span class="documents__date"
+                              >25 июня 2020 21:40</span
+                            >
+                          </div>
+                          <div class="documents__body">
+                            <strong class="documents__sum">2 500 ₽</strong>
+                            <div class="documents__actions">
+                              <button class="documents__cancel" type="button">
+                                Отменить подписку
+                              </button>
+                              <button
+                                class="documents__offers button"
+                                type="button"
+                              >
+                                <span class="button__content"
+                                  >Персональные предложения</span
+                                >
+                              </button>
+                            </div>
+                          </div>
+                          <div class="documents__ac-button" data-ac-button>
+                            <span
+                              >Отчет по автоматической подачи заявки на
+                              займ</span
+                            >
+                            <svg>
+                              <use
+                                href="./images/sprite.svg#drop"
+                                xlink:href="./images/sprite.svg#drop"
+                              ></use>
+                            </svg>
+                          </div>
+                          <div
+                            class="documents__ac-body"
+                            data-ac-body
+                            style="display: none"
+                          >
+                            <div class="documents__groups">
+                              <div class="documents__group">
+                                <div class="documents__logo">
+                                  <img
+                                    src="./images/documents/logo_01.png"
+                                    alt="logo"
+                                  />
+                                </div>
+                                <div class="documents__info">
+                                  <span class="documents__name">ОТП банк</span>
+                                  <p class="documents__description">
+                                    Раньше весь процесс получения кредита
+                                    занимал 10 дней. Теперь мы можем
+                                    авторизовать ссуду примерно за 30 минут.
+                                  </p>
+                                  <span class="documents__date"
+                                    >25 июня 2020 21:40</span
+                                  >
+                                </div>
+                              </div>
+                              <div class="documents__group">
+                                <div class="documents__logo">
+                                  <img
+                                    src="./images/documents/logo_01.png"
+                                    alt="logo"
+                                  />
+                                </div>
+                                <div class="documents__info">
+                                  <span class="documents__name">ОТП банк</span>
+                                  <p class="documents__description">
+                                    Раньше весь процесс получения кредита
+                                    занимал 10 дней. Теперь мы можем
+                                    авторизовать ссуду примерно за 30 минут.
+                                  </p>
+                                  <span class="documents__date"
+                                    >25 июня 2020 21:40</span
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="documents__item" data-ac-item>
+                          <div class="documents__head">
+                            <span class="documents__label"
+                              >Описание услуги по займу, общей суммой 2 500
+                              ₽</span
+                            >
+                            <span class="documents__date"
+                              >25 июня 2020 21:40</span
+                            >
+                          </div>
+                          <div class="documents__body">
+                            <strong class="documents__sum">2 500 ₽</strong>
+                            <div class="documents__actions">
+                              <button class="documents__cancel" type="button">
+                                Отменить подписку
+                              </button>
+                              <button
+                                class="documents__offers button"
+                                type="button"
+                              >
+                                <span class="button__content"
+                                  >Персональные предложения</span
+                                >
+                              </button>
+                            </div>
+                          </div>
+                          <div class="documents__ac-button" data-ac-button>
+                            <span
+                              >Отчет по автоматической подачи заявки на
+                              займ</span
+                            >
+                            <svg>
+                              <use
+                                href="./images/sprite.svg#drop"
+                                xlink:href="./images/sprite.svg#drop"
+                              ></use>
+                            </svg>
+                          </div>
+                          <div
+                            class="documents__ac-body"
+                            data-ac-body
+                            style="display: none"
+                          >
+                            <div class="documents__groups">
+                              <div class="documents__group">
+                                <div class="documents__logo">
+                                  <img
+                                    src="./images/documents/logo_01.png"
+                                    alt="logo"
+                                  />
+                                </div>
+                                <div class="documents__info">
+                                  <span class="documents__name">ОТП банк</span>
+                                  <p class="documents__description">
+                                    Раньше весь процесс получения кредита
+                                    занимал 10 дней. Теперь мы можем
+                                    авторизовать ссуду примерно за 30 минут.
+                                  </p>
+                                  <span class="documents__date"
+                                    >25 июня 2020 21:40</span
+                                  >
+                                </div>
+                              </div>
+                              <div class="documents__group">
+                                <div class="documents__logo">
+                                  <img
+                                    src="./images/documents/logo_01.png"
+                                    alt="logo"
+                                  />
+                                </div>
+                                <div class="documents__info">
+                                  <span class="documents__name">ОТП банк</span>
+                                  <p class="documents__description">
+                                    Раньше весь процесс получения кредита
+                                    занимал 10 дней. Теперь мы можем
+                                    авторизовать ссуду примерно за 30 минут.
+                                  </p>
+                                  <span class="documents__date"
+                                    >25 июня 2020 21:40</span
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <section
+                    class="profile__feedback feedback"
+                    data-tab-body="feedback"
+                    style="display: none"
+                  >
+                    <div class="feedback__wrapper">
+                      <h3 class="feedback__title profile-title">
+                        Форма обратной связи
+                      </h3>
+                      <form class="feedback__form">
+                        <div class="feedback__inputs">
+                          <div class="feedback__row">
+                            <div class="inputs input">
+                              <div class="input__wrapper">
+                                <span class="input__label"
+                                  >Имя <span>*</span></span
+                                >
+                                <div class="input__group">
+                                  <input class="input__target" type="text" />
+                                </div>
+                              </div>
+                              <span class="inputs__text-error"
+                                >Неверно заполненное поле</span
+                              >
+                            </div>
+                            <div class="inputs input">
+                              <div class="input__wrapper">
+                                <span class="input__label"
+                                  >Номер телефона <span>*</span></span
+                                >
+                                <div class="input__group">
+                                  <input class="input__target" type="text" />
+                                </div>
+                              </div>
+                              <span class="inputs__text-error"
+                                >Неверно заполненное поле</span
+                              >
+                            </div>
+                          </div>
+                          <div class="inputs input">
+                            <div class="input__wrapper">
+                              <span class="input__label"
+                                >Почта <span>*</span></span
+                              >
+                              <div class="input__group">
+                                <input class="input__target" type="text" />
+                              </div>
+                            </div>
+                            <span class="inputs__text-error"
+                              >Неверно заполненное поле</span
+                            >
+                          </div>
+                          <div class="inputs input">
+                            <div class="input__wrapper">
+                              <span class="input__label"
+                                >Сообщение <span>*</span></span
+                              >
+                              <div class="input__group">
+                                <textarea class="input__target"></textarea>
+                              </div>
+                            </div>
+                            <span class="inputs__text-error"
+                              >Неверно заполненное поле</span
+                            >
+                          </div>
+                        </div>
+                        <button class="feedback__submit button" type="submit">
+                          <span class="button__content">Отправить</span>
+                        </button>
                       </form>
                     </div>
-                  </div>
+                  </section>
+                  <section
+                    class="profile__about profile-about"
+                    data-tab-body="profile-about"
+                    style="display: none"
+                  >
+                    <div class="profile-about__wrapper">
+                      <h3 class="profile-about__title profile-title">
+                        О сервисе
+                      </h3>
+                      <span class="profile-about__subtitle"
+                        >Одновременно подайте заявку, как минимум, в 3 компании
+                        для гарантированного получения займа.</span
+                      >
+                      <div class="profile-about__body">
+                        <span class="profile-about__label"
+                          >Договор присоединения о предоставлении юридических
+                          услуг через сеть интернет (публичная оферта)</span
+                        >
+                        <p class="profile-about__text">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua. Elementum sagittis vitae et leo
+                          duis. Enim praesent elementum facilisis leo vel
+                          fringilla. Mauris pellentesque pulvinar pellentesque
+                          habitant morbi tristique senectus. Nibh tortor id
+                          aliquet lectus proin. Tellus elementum sagittis vitae
+                          et leo duis ut diam quam.
+                        </p>
+                        <div class="profile-about__group">
+                          <span class="profile-about__sublabel">1.</span>
+                          <span class="profile-about__sublabel"
+                            >Tellus elementum sagittis vitae et leo duis ut diam
+                            quam</span
+                          >
+                          <p class="profile-about__text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Elementum sagittis vitae et leo
+                            duis. Enim praesent elementum facilisis leo vel
+                            fringilla. Mauris pellentesque pulvinar pellentesque
+                            habitant morbi tristique senectus. Nibh tortor id
+                            aliquet lectus proin. Tellus elementum sagittis
+                            vitae et leo duis ut diam quam.
+                          </p>
+                        </div>
+                        <div class="profile-about__group">
+                          <span class="profile-about__sublabel">2.</span>
+                          <span class="profile-about__sublabel"
+                            >Lorem ipsum dolor sit amet, consectetur</span
+                          >
+                          <p class="profile-about__text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Elementum sagittis vitae et leo
+                            duis. Enim praesent elementum facilisis leo vel
+                            fringilla. Mauris pellentesque pulvinar pellentesque
+                            habitant morbi tristique senectus. Nibh tortor id
+                            aliquet lectus proin. Tellus elementum sagittis
+                            vitae et leo duis ut diam quam.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <section
+                    class="profile__offers offers"
+                    data-tab-body="offers"
+                    style="display: none"
+                  >
+                    <div class="offers__wrapper">
+                      <h3 class="offers__title profile-title">
+                        Мои предложения
+                      </h3>
+                      <span class="offers__subtitle"
+                        >Одновременно подайте заявку, как минимум, в 3 компании
+                        для гарантированного получения займа.</span
+                      >
+                      <div class="offers__items">
+                        <a class="get-offers__item offer" href="#"
+                          ><div class="offer__wrapper">
+                            <div class="offer__head">ставка 0.05% в день</div>
+                            <div class="offer__body">
+                              <div class="offer__logo">
+                                <img
+                                  src="./images/offer/logo_01.png"
+                                  alt="logo"
+                                />
+                              </div>
+                              <strong class="offer__sum">250 000 ₽</strong>
+                              <button
+                                class="offer__button button"
+                                type="button"
+                              >
+                                <span class="button__content">Получить</span>
+                              </button>
+                            </div>
+                          </div></a
+                        ><a class="get-offers__item offer" href="#"
+                          ><div class="offer__wrapper">
+                            <div class="offer__head">ставка 0.05% в день</div>
+                            <div class="offer__body">
+                              <div class="offer__logo">
+                                <img
+                                  src="./images/offer/logo_02.png"
+                                  alt="logo"
+                                />
+                              </div>
+                              <strong class="offer__sum">250 000 ₽</strong>
+                              <button
+                                class="offer__button button"
+                                type="button"
+                              >
+                                <span class="button__content">Получить</span>
+                              </button>
+                            </div>
+                          </div></a
+                        ><a class="get-offers__item offer" href="#"
+                          ><div class="offer__wrapper">
+                            <div class="offer__head">ставка 0.05% в день</div>
+                            <div class="offer__body">
+                              <div class="offer__logo">
+                                <img
+                                  src="./images/offer/logo_03.png"
+                                  alt="logo"
+                                />
+                              </div>
+                              <strong class="offer__sum">250 000 ₽</strong>
+                              <button
+                                class="offer__button button"
+                                type="button"
+                              >
+                                <span class="button__content">Получить</span>
+                              </button>
+                            </div>
+                          </div></a
+                        ><a class="get-offers__item offer" href="#"
+                          ><div class="offer__wrapper">
+                            <div class="offer__head">ставка 0.05% в день</div>
+                            <div class="offer__body">
+                              <div class="offer__logo">
+                                <img
+                                  src="./images/offer/logo_04.png"
+                                  alt="logo"
+                                />
+                              </div>
+                              <strong class="offer__sum">250 000 ₽</strong>
+                              <button
+                                class="offer__button button"
+                                type="button"
+                              >
+                                <span class="button__content">Получить</span>
+                              </button>
+                            </div>
+                          </div></a
+                        ><a class="get-offers__item offer" href="#"
+                          ><div class="offer__wrapper">
+                            <div class="offer__head">ставка 0.05% в день</div>
+                            <div class="offer__body">
+                              <div class="offer__logo">
+                                <img
+                                  src="./images/offer/logo_05.png"
+                                  alt="logo"
+                                />
+                              </div>
+                              <strong class="offer__sum">250 000 ₽</strong>
+                              <button
+                                class="offer__button button"
+                                type="button"
+                              >
+                                <span class="button__content">Получить</span>
+                              </button>
+                            </div>
+                          </div></a
+                        ><a class="get-offers__item offer" href="#"
+                          ><div class="offer__wrapper">
+                            <div class="offer__head">ставка 0.05% в день</div>
+                            <div class="offer__body">
+                              <div class="offer__logo">
+                                <img
+                                  src="./images/offer/logo_06.png"
+                                  alt="logo"
+                                />
+                              </div>
+                              <strong class="offer__sum">250 000 ₽</strong>
+                              <button
+                                class="offer__button button"
+                                type="button"
+                              >
+                                <span class="button__content">Получить</span>
+                              </button>
+                            </div>
+                          </div></a
+                        >
+                      </div>
+                      <button
+                        class="offers__more button-secondary"
+                        type="button"
+                      >
+                        <span class="button-secondary__content"
+                          >Показать ещё</span
+                        >
+                      </button>
+                    </div>
+                  </section>
                 </div>
                 <p class="profile__text">
                   Если услуга перестала быть актуальна для вас (вы получили займ
