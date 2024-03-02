@@ -248,7 +248,7 @@ body.no-scroll {
     --clr: var(--color-06);
     --clr-hover: var(--color-04);
     --border-clr: var(--color-06);
-    --bg: var(--color-03);
+    --bg: var(--color-04);
     --duration: 0.2s;
     width: 100%;
     min-height: var(--height);
