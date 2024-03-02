@@ -1328,9 +1328,10 @@ textarea.input__target {
 }
 
 .checkbox__text {
+    padding: 0.563rem 0 0 0;
     display: block;
-    font-size: 0.75rem;
-    line-height: 1.667;
+    font-size: 0.875rem;
+    line-height: 1.429;
     color: rgb(var(--color-01));
 }
 
@@ -2483,7 +2484,7 @@ textarea.input__target {
 .popup__body {
     width: 100%;
     max-width: 26.875rem;
-    padding: 3.125rem 1.25rem 3.75rem 1.25rem;
+    padding: 3.125rem 1.25rem 2.5rem 1.25rem;
     position: relative;
     transform: translate3d(0, -20px, 0);
     transition: transform 0.2s linear;

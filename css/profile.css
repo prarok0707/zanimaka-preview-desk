@@ -1328,9 +1328,10 @@ textarea.input__target {
 }
 
 .checkbox__text {
+    padding: 0.563rem 0 0 0;
     display: block;
-    font-size: 0.75rem;
-    line-height: 1.667;
+    font-size: 0.875rem;
+    line-height: 1.429;
     color: rgb(var(--color-01));
 }
 
